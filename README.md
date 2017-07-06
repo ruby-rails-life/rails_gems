@@ -11,3 +11,8 @@
 ## baby_squeel
 
 【controller】articles#index
+
+## config
+
+【controller】articles#index
+
