@@ -16,6 +16,8 @@ gem 'sqlite3'
 gem 'rails-i18n'
 gem 'ransack'
 
+gem 'baby_squeel'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
