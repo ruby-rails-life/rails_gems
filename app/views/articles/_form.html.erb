@@ -24,9 +24,12 @@
     <%= f.submit %>
   </p>
 
-  <span>
+  <p>Single_File
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
+  </p>
+  <p>Multi_Files
+    <%= f.file_field :muti_picture, multiple: true %>
+  </p>
 <% end %>
 
 <script type="text/javascript">

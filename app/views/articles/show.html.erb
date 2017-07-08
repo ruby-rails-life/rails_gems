@@ -2,20 +2,24 @@
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
- 
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
-
+<span>SingleFile:</span> 
 <p>
    <%= image_tag @article.picture.url if @article.picture? %>
 </p>
-
 <p>
    <%= image_tag @article.picture.thumb.url if @article.picture? %>
 </p>
- 
+<span>Multi_Files:<%= @article.muti_picture.length %></span>
+<% @article.muti_picture.each do |pic| %>
+<p>
+   <%= image_tag pic.url %>
+</p>
+<% end %>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
  

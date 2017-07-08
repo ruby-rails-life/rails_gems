@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
   def index
-    #@articles = Article.all
+    @articles = Article.all
     #@articles = Article.where.has { title =~ 'title1%' }
-    @articles = Article.where.has { title =~ 'title1%' }.ordering { title.desc }
+    #@articles = Article.where.has { title =~ 'title1%' }.ordering { title.desc }
     #@articles = Article.joins(:comments).where.has { comments.commenter =~ 'comment1%' }
     #@articles = Article.joins(:comments).where.has { comments.sift(:name_contains, 'comment1') }
   end
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
   
   private
   def article_params
-    params.require(:article).permit(:title, :text, :picture)
+    params.require(:article).permit(:title, :text, :picture, {muti_picture: []})
   end
 
 end
