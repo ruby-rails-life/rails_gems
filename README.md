@@ -18,5 +18,5 @@
 
 ## carrierwave
 
-【controller】articles#edit
-
+【controller】articles#new
+install mysql5.7.18 for multiple file uploads using json field
