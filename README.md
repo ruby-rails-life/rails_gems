@@ -18,6 +18,12 @@
 
 ## carrierwave
 
- 【controller】articles#new
- install mysql5.7.18 for multiple file uploads using json field
- https://github.com/carrierwaveuploader/carrierwave
+【controller】articles#new
+install mysql5.7.18 for multiple file uploads using json field
+https://github.com/carrierwaveuploader/carrierwave
+
+## active_decorator
+
+【controller】articles#index method:title_with_text
+
+

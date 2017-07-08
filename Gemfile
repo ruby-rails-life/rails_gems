@@ -24,6 +24,7 @@ gem 'config'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'active_decorator'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
