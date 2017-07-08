@@ -23,9 +23,13 @@
   <p>
     <%= f.submit %>
   </p>
-
-  <p>Single_File
+  <p>Single_File:<%= image_tag(@article.picture.url) if @article.picture? %>
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    <%= f.hidden_field :picture_cache %>
+     <label>
+      <%= f.check_box :remove_picture %>
+      Remove picture
+    </label>
   </p>
   <p>Multi_Files
     <%= f.file_field :muti_picture, multiple: true %>

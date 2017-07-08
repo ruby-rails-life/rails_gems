@@ -11,8 +11,12 @@
    <%= image_tag @article.picture.url if @article.picture? %>
 </p>
 <p>
-   <%= image_tag @article.picture.thumb.url if @article.picture? %>
+   <%= image_tag @article.picture.thumb.url if @article.picture.version_exists?(:thumb) && @article.picture.thumb.file.exists? %>
 </p>
+<p>
+   <%= image_tag @article.picture.small_thumb.url if @article.picture.version_exists?(:small_thumb) && @article.picture.small_thumb.file.exists? %>
+</p>
+
 <span>Multi_Files:<%= @article.muti_picture.length %></span>
 <% @article.muti_picture.each do |pic| %>
 <p>
