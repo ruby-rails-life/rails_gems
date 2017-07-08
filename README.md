@@ -16,3 +16,7 @@
 
 【controller】articles#index
 
+## carrierwave
+
+【controller】articles#edit
+

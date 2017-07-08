@@ -7,6 +7,14 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+<p>
+   <%= image_tag @article.picture.url if @article.picture? %>
+</p>
+
+<p>
+   <%= image_tag @article.picture.thumb.url if @article.picture? %>
+</p>
  
 <h2>Comments</h2>
 <%= render @article.comments %>

@@ -20,6 +20,10 @@ gem 'baby_squeel'
 
 gem 'config'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
