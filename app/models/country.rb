@@ -6,4 +6,5 @@ class Country < ActiveHash::Base
   field :name
   create :id => 1, :name => "China"
   create :id => 2, :name => "JP"
+
 end

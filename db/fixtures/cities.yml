@@ -1,9 +1,17 @@
+# Array Style
+- /aliases:
+  street_prefix: &street_prefix
+    beautiful
+
 - id: 1
   name: HongKong
+  street: *street_prefix
   country_id: 1
 - id: 2
   name: ShangHai
+  street: 
   country_id: 1
 - id: 3
   name: Tokyo
+  street: *street_prefix
   country_id: 2
