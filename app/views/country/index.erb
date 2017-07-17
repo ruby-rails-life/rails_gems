@@ -1,0 +1,18 @@
+<h1>Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= country.id %></td>
+        <td><%= country.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

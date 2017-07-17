@@ -26,4 +26,8 @@ https://github.com/carrierwaveuploader/carrierwave
 
 【controller】articles#index method:title_with_text
 
+## active_hash
+
+【controller】country#index 
+
 

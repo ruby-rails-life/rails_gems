@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'country/index'
   resources :topics
   resources :users
   resources :articles do
