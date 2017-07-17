@@ -28,5 +28,5 @@ https://github.com/carrierwaveuploader/carrierwave
 
 ## active_hash 
 
-・A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource
+・A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource  
 ・【controller】country#index
