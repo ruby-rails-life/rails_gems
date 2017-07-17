@@ -5,6 +5,7 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
+      <th>People</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,11 @@
       <tr>
         <td><%= country.id %></td>
         <td><%= country.name %></td>
+        <td>
+        <% country.people.each do |person| %>
+          <%= person.name %>|<%= person.gender %><br> 
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
