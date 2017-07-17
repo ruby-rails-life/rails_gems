@@ -6,6 +6,7 @@
       <th>Id</th>
       <th>Name</th>
       <th>People</th>
+      <th>Cities</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,11 @@
         <td>
         <% country.people.each do |person| %>
           <%= person.name %>|<%= person.gender %><br> 
+        <% end %>
+        </td>
+        <td>
+        <% country.cities.each do |city| %>
+          <%= city.name %><br> 
         <% end %>
         </td>
       </tr>

@@ -30,5 +30,5 @@
 
 ## active_hash 
 
-【controller】country#index(associations)  
+【controller】country#index(Associations,Yaml file)  
 * A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource 

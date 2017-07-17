@@ -1,0 +1,9 @@
+- id: 1
+  name: HongKong
+  country_id: 1
+- id: 2
+  name: ShangHai
+  country_id: 1
+- id: 3
+  name: Tokyo
+  country_id: 2
