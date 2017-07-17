@@ -26,6 +26,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'active_decorator'
 gem 'active_hash'
+gem 'active_type'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

@@ -35,6 +35,6 @@
 
 ## active_type
 
-【controller】holidays#edit 
-
+【controller】holidays#edit(Nested attributes)   
+【controller】holidays#index(ActiveType.cast)  
 

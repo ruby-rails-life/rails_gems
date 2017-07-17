@@ -1,5 +1,11 @@
 class HolidaysController < ApplicationController
   
+  def index
+    holiday = Holiday.new(date: DateTime.now)
+    @holiday_extend = ActiveType.cast(holiday, HolidayExtend)
+    @holiday_extend.name = '祝日'
+  end
+    
   def edit
     @holidays_form = HolidaysForm.new
   end

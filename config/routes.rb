@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'country/index'
+  get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
   resources :topics
