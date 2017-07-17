@@ -10,7 +10,8 @@
 
 ## baby_squeel
 
-【controller】articles#index
+【controller】articles#index     
+* BabySqueel provides a Squeel-like query DSL for Active Record 
 
 ## config
 
@@ -18,15 +19,16 @@
 
 ## carrierwave
 
-* 【controller】articles#new
+【controller】articles#new  
 * install mysql5.7.18 for multiple file uploads using json field
 * [reference](https://github.com/carrierwaveuploader/carrierwave)
 
 ## active_decorator
 
-【controller】articles#index method:title_with_text
+【controller】articles#index method:title_with_text  
+* A simple and Rubyish view helper. Keep your helpers and views Object-Oriented!
 
 ## active_hash 
 
-* A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource  
-* 【controller】country#index
+【controller】country#index  
+* A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource 
