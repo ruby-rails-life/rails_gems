@@ -35,8 +35,8 @@
 
 【controller】country#index(Associations,Yaml file,Enum)  
 * A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource   
-* [reference](http://kotatu.org/blog/2014/10/09/active-hash-gem/)   
-* [reference](https://github.com/zilkey/active_hash)  
+* [reference_1](http://kotatu.org/blog/2014/10/09/active-hash-gem/)   
+* [reference_2](https://github.com/zilkey/active_hash)  
 
 ## active_type
 
