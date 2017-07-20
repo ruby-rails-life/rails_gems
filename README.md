@@ -46,5 +46,7 @@
 
 ## ActiveSupport::Concern
 
-【controller】book#index(models/concerns/common_module.rb)  
+【controller】book#index  
+* controllers/concerns/common.rb    
+* models/concerns/common_module.rb
 * [reference](http://qiita.com/shizuma/items/ae6ecb85615f74444693)

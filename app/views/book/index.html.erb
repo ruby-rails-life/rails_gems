@@ -39,3 +39,23 @@
     <% end %>
   </tbody>
 </table>
+
+<p>order by state books</p>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books_order.each do |book| %>
+      <tr>
+        <td><%= book.id %></td>
+        <td><%= book.title %></td>
+        <td><%= book.show_name? %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
