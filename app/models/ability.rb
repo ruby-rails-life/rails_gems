@@ -28,7 +28,7 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-     user ||= Deviseuser.new
+     user ||= User.new
      if user.has_role?('admin')
       can :read, :all
       can :access, :rails_admin
@@ -42,5 +42,6 @@ class Ability
       can :read, [] # B
       can :create, [] # C
     end
+
   end
 end

@@ -66,3 +66,7 @@
 
 * [reference_1](http://d.hatena.ne.jp/htz/20140718/1405690417)  
 * [reference_2](http://mdsgn.me/ruby-on-rails/cancancan%E3%81%A8rails_admin/)
+
+## devise
+
+* [reference](http://qiita.com/Salinger/items/873e3c667462746ae707)
