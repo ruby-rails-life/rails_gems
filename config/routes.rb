@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'book', to: 'book#index'
-
-  get 'country/index'
+  get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'

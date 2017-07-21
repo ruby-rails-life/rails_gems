@@ -56,3 +56,8 @@
 【model】Paranoiac|Paranoid  
 * This gem can be used to hide records instead of deleting them, making them recoverable later.  
 * [reference](https://github.com/ActsAsParanoid/acts_as_paranoid)  
+
+## seed_dump
+
+* Seed Dump is a Rails 4 and 5 plugin that adds a rake task named db:seed:dump
+* [reference](https://github.com/rroblak/seed_dump)  

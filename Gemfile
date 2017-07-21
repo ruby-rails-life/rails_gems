@@ -28,6 +28,7 @@ gem 'active_decorator'
 gem 'active_hash'
 gem 'active_type'
 gem 'acts_as_paranoid', '~> 0.5.0'
+gem 'seed_dump'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
