@@ -49,4 +49,10 @@
 【controller】book#index  
 * controllers/concerns/common.rb    
 * models/concerns/common_module.rb
-* [reference](http://qiita.com/shizuma/items/ae6ecb85615f74444693)
+* [reference](http://qiita.com/shizuma/items/ae6ecb85615f74444693)  
+
+## acts_as_paranoid
+
+【model】Paranoiac|Paranoid  
+* This gem can be used to hide records instead of deleting them, making them recoverable later.  
+* [reference](https://github.com/ActsAsParanoid/acts_as_paranoid)  

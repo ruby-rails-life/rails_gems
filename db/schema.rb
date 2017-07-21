@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720092118) do
+ActiveRecord::Schema.define(version: 20170721060118) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -46,6 +46,25 @@ ActiveRecord::Schema.define(version: 20170720092118) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "paranoiacs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.boolean  "respect"
+    t.index ["deleted_at"], name: "index_paranoiacs_on_deleted_at", using: :btree
+  end
+
+  create_table "paranoids", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.integer  "paranoiac_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_paranoids_on_deleted_at", using: :btree
+    t.index ["paranoiac_id"], name: "index_paranoids_on_paranoiac_id", using: :btree
+  end
+
   create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "content",    limit: 65535
@@ -62,5 +81,6 @@ ActiveRecord::Schema.define(version: 20170720092118) do
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "paranoids", "paranoiacs"
   add_foreign_key "topics", "users"
 end
