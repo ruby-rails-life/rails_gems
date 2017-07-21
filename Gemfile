@@ -29,6 +29,9 @@ gem 'active_hash'
 gem 'active_type'
 gem 'acts_as_paranoid', '~> 0.5.0'
 gem 'seed_dump'
+gem 'devise'
+gem 'cancancan'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
