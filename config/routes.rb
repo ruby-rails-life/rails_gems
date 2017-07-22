@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  get 'home/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :deviseusers
   get 'book', to: 'book#index'
   get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'
