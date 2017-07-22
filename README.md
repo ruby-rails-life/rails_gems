@@ -67,3 +67,8 @@
 * Customize user model
 * [reference_1](http://qiita.com/Salinger/items/873e3c667462746ae707)
 * [reference_2](http://ruby-rails.hatenadiary.com/entry/20140804/1407168000)
+
+## devise + cancancan + rails_admin
+
+* [reference_1](http://mdsgn.me/ruby-on-rails/cancancan%E3%81%A8rails_admin/)
+* [reference_2](http://d.hatena.ne.jp/htz/20140718/1405690417)
