@@ -69,5 +69,4 @@
 
 ## devise
 
-* Devise is a flexible authentication solution for Rails based on Warde  
 * [reference](http://qiita.com/Salinger/items/873e3c667462746ae707)
