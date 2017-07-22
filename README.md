@@ -61,8 +61,3 @@
 
 * Seed Dump is a Rails 4 and 5 plugin that adds a rake task named db:seed:dump
 * [reference](https://github.com/rroblak/seed_dump)  
-
-## devise + cancancan + rails_admin
-
-* [reference_1](http://d.hatena.ne.jp/htz/20140718/1405690417)  
-* [reference_2](http://mdsgn.me/ruby-on-rails/cancancan%E3%81%A8rails_admin/)
