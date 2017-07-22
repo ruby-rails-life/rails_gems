@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :deviseusers
+  devise_for :users
   get 'book', to: 'book#index'
   get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'

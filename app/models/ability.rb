@@ -28,8 +28,8 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-     user ||= Deviseuser.new
-     if user.has_role?('admin')
+    user ||= User.new
+    if user.has_role?('admin')
       can :read, :all
       can :access, :rails_admin
       can :dashboard
