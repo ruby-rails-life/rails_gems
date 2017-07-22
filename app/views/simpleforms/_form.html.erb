@@ -1,0 +1,22 @@
+<%= simple_form_for @simpleform do |f| %>
+<!--
+ <%= f.input :name, disabled: true, placeholder: 'バナナ', hint: 'You cannot change your name.' %>
+-->
+  <%= f.input :name, label: 'name please', placeholder: 'バナナ', error: 'name is mandatory, please specify one' %>
+
+  <%= f.input :content, hint: 'content hint.', wrapper_html: { id: 'content' } %>
+
+<!--
+  <%= f.input :popular, inline_label: 'Is it popular', input_html: { value: '1' } %>
+  <%= f.input :popular, as: :radio_buttons %>
+  <%= f.input :popular, as: :select %>
+-->
+
+  <%= f.input :popular, as: :boolean, checked_value: true, unchecked_value: false %>
+
+  <%= f.input :production_date, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [:month, :year] %>
+
+  <%= f.button :submit %>
+<% end %>

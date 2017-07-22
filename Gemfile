@@ -33,6 +33,7 @@ gem 'acts_as_paranoid', '~> 0.5.0'
 gem 'seed_dump'
 gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'simple_form'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

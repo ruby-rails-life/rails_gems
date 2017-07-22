@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
+  resources :simpleforms
   resources :topics
   resources :users
   resources :articles do

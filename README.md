@@ -72,3 +72,9 @@
 
 * [reference_1](http://mdsgn.me/ruby-on-rails/cancancan%E3%81%A8rails_admin/)
 * [reference_2](http://d.hatena.ne.jp/htz/20140718/1405690417)
+
+## simple_form
+
+【controller】simpleform#new     
+* [reference](https://github.com/plataformatec/simple_form)
+
