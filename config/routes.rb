@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'home#index'
+  get 'home/index'
   get 'book', to: 'book#index'
   get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'
