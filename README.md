@@ -64,5 +64,6 @@
 
 ## devise
 
+* Customize user model
 * [reference_1](http://qiita.com/Salinger/items/873e3c667462746ae707)
 * [reference_2](http://ruby-rails.hatenadiary.com/entry/20140804/1407168000)
