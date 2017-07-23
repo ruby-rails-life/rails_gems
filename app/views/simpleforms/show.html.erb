@@ -26,6 +26,10 @@
           <td>Producing area</td>
           <td><% if  @simpleform.producing_area %><%= @simpleform.producing_area %><% end %></td>
         </tr>
+        <tr>
+          <td>Simpleformp</td>
+          <td><% if @simpleform.simpleformp %><%= @simpleform.simpleformp.name %><% end %></td>
+        </tr>
       </tbody>
     </table>
     <%= link_to 'Edit', edit_simpleform_path(@simpleform) %> |

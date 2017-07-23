@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723050657) do
+ActiveRecord::Schema.define(version: 20170723061912) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -76,6 +76,12 @@ ActiveRecord::Schema.define(version: 20170723050657) do
     t.integer "role_id", null: false
   end
 
+  create_table "simpleformps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "simpleforms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.text     "content",           limit: 65535
@@ -86,6 +92,8 @@ ActiveRecord::Schema.define(version: 20170723050657) do
     t.datetime "updated_at",                      null: false
     t.integer  "expiration_period"
     t.string   "producing_area"
+    t.integer  "simpleformp_id"
+    t.index ["simpleformp_id"], name: "index_simpleforms_on_simpleformp_id", using: :btree
   end
 
   create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -126,5 +134,6 @@ ActiveRecord::Schema.define(version: 20170723050657) do
 
   add_foreign_key "comments", "articles"
   add_foreign_key "paranoids", "paranoiacs"
+  add_foreign_key "simpleforms", "simpleformps"
   add_foreign_key "topics", "users"
 end
