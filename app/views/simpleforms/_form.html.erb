@@ -23,6 +23,7 @@
   <%= f.input :producing_area, priority: [ "Brazil" ], collection: [ "Australia", "Brazil", "New Zealand"] %>
 
   <%= f.association :simpleformp %>
+  <%= f.association :flavors %>
 
   <%= f.button :submit, 'Create', :class => 'btn-primary' %>
 <% end %>

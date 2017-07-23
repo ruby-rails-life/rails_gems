@@ -16,6 +16,7 @@
           <td><%= simpleform.name %></td>
           <td><% if simpleform.popular %>It is very popular<% end %></td>
           <td><% if simpleform.simpleformp %><%= simpleform.simpleformp.name %><% end %></td>
+          <td><% if simpleform.flavors %>Flavor<% end %></td>
           <td><%= link_to 'Show', simpleform %></td>
           <td><%= link_to 'Edit', edit_simpleform_path(simpleform) %></td>
           <td><%= link_to 'Destroy', simpleform, method: :delete, data: { confirm: 'Are you sure?' } %></td>

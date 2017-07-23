@@ -40,11 +40,20 @@ class SimpleformsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    @simpleform = Simpleform.find(params[:id])
+    @simpleform.destroy
+    respond_to do |format|
+      format.html { redirect_to simpleforms_url, notice: 'Simpleform was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
   
   private
 
     def simpleform_params
-      params.require(:simpleform).permit(:name, :content, :popular, :production_date, :expiration_period, :producing_area, :simpleformp_id)
+      params.require(:simpleform).permit(:name, :content, :popular, :production_date, :expiration_period, :producing_area, :simpleformp_id, {:flavor_ids => []})
     end
 
 end

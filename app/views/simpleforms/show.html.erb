@@ -30,6 +30,17 @@
           <td>Simpleformp</td>
           <td><% if @simpleform.simpleformp %><%= @simpleform.simpleformp.name %><% end %></td>
         </tr>
+        <tr>
+          <td>Flavor</td>
+          <td>
+            <% if @simpleform.flavors %>
+            <% @simpleform.flavors.each_with_index do |flavor, idx| %>
+            <% if idx!= 0 %>|<% end %>
+            <%= flavor.name %>
+            <% end %>
+            <% end %>
+          </td>
+        </tr>
       </tbody>
     </table>
     <%= link_to 'Edit', edit_simpleform_path(@simpleform) %> |
