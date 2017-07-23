@@ -76,5 +76,10 @@
 ## simple_form
 
 【controller】simpleform(association:has_and_belongs_to_many, custom_inputs, I18n)   
+* Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms  
 * [reference](https://github.com/plataformatec/simple_form)
 
+## kaminari
+
+【controller】simpleform#index(I18n)   
+* [reference_1](http://ruby-rails.hatenadiary.com/entry/20141113/1415874683)

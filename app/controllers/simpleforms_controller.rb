@@ -1,6 +1,6 @@
 class SimpleformsController < ApplicationController
   def index
-    @simpleforms = Simpleform.all
+    @simpleforms = Simpleform.page(params[:page])
   end
 
   def show
