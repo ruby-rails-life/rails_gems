@@ -23,6 +23,11 @@
   <%= f.input :producing_area, priority: [ "Brazil" ], collection: [ "Australia", "Brazil", "New Zealand"] %>
 
   <%= f.association :simpleformp %>
+<!--
+  <%= f.input :simpleformp_id do %>
+    <%= f.select :simpleformp_id, Simpleformp.all.map { |r| [r.name, r.id] }, include_blank: true %>
+  <% end %>
+-->
   <%= f.association :flavors %>
 
   <%= f.button :submit, 'Create', :class => 'btn-primary' %>
