@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723071501) do
+ActiveRecord::Schema.define(version: 20170723084346) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20170723071501) do
     t.integer  "expiration_period"
     t.string   "producing_area"
     t.integer  "simpleformp_id"
+    t.integer  "price"
     t.index ["simpleformp_id"], name: "index_simpleforms_on_simpleformp_id", using: :btree
   end
 

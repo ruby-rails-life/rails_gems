@@ -75,6 +75,6 @@
 
 ## simple_form
 
-【controller】simpleform(association:has_and_belongs_to_many)   
+【controller】simpleform(association:has_and_belongs_to_many,custom_inputs)   
 * [reference](https://github.com/plataformatec/simple_form)
 

@@ -30,5 +30,8 @@
 -->
   <%= f.association :flavors %>
 
+  <%= f.input :price, as: :currency %>
+ 
   <%= f.button :submit, 'Create', :class => 'btn-primary' %>
+
 <% end %>
