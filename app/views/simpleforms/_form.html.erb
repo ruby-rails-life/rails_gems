@@ -20,8 +20,11 @@
 
   <%= f.input :expiration_period, collection: 1..3, prompt: "Select expiration period", selected: 2 %>
 
-  <%= f.input :producing_area, collection: [ "Australia", "Brazil", "New Zealand"] %>
+  <%= f.input :producing_area, collection: [ "Australia", "Brazil", "New Zealand"], :include_blank => t('simple_form.include_blanks.simpleform.producing_area') %>
 
+<!--
+  <%= f.input :producing_area, collection: [ "Australia", "Brazil", "New Zealand"], :include_blank => "(select if none)" %>
+-->
   <%= f.association :simpleformp %>
 <!--
   <%= f.input :simpleformp_id do %>

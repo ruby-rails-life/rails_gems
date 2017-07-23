@@ -43,8 +43,8 @@ en:
         content: 'content (locale)'
     include_blanks:
       simpleform:
-        producing_area: 'Rather not say'
+        producing_area: 'select if none (locale)'
     prompts:
       simpleform:
-        expiration_period: 'Select your simpleformp (locale)'
-        simpleformp: 'Select your simpleformp'
+        expiration_period: 'Select your Expiration period (locale)'
+        simpleformp: 'Select your simpleformp (locale)'

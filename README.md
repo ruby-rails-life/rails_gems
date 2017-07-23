@@ -33,7 +33,7 @@
 
 ## active_hash 
 
-【controller】country#index(Associations,Yaml file,Enum)  
+【controller】country#index(Associations, Yaml file, Enum)  
 * A readonly ActiveRecord-esque base class that lets you use a hash, a Yaml file or a custom file as the datasource   
 * [reference_1](http://kotatu.org/blog/2014/10/09/active-hash-gem/)   
 * [reference_2](https://github.com/zilkey/active_hash)  
@@ -75,6 +75,6 @@
 
 ## simple_form
 
-【controller】simpleform(association:has_and_belongs_to_many,custom_inputs)   
+【controller】simpleform(association:has_and_belongs_to_many, custom_inputs, I18n)   
 * [reference](https://github.com/plataformatec/simple_form)
 
