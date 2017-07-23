@@ -1,4 +1,4 @@
-<%= simple_form_for @simpleform do |f| %>
+<%= simple_form_for @simpleform  do |f| %>
 <!--
  <%= f.input :name, disabled: true, placeholder: 'バナナ', hint: 'You cannot change your name.' %>
 -->
@@ -18,5 +18,9 @@
                               end_year: Date.today.year - 12, discard_day: true,
                               order: [:month, :year] %>
 
-  <%= f.button :submit %>
+  <%= f.input :expiration_period, collection: 1..3, prompt: "Select expiration period", selected: 2 %>
+
+  <%= f.input :producing_area, priority: [ "Brazil" ], collection: [ "Australia", "Brazil", "New Zealand"] %>
+
+  <%= f.button :submit, 'Create', :class => 'btn-primary' %>
 <% end %>
