@@ -75,6 +75,6 @@
 
 ## simple_form
 
-【controller】simpleform#new     
+【controller】simpleform(association)   
 * [reference](https://github.com/plataformatec/simple_form)
 
