@@ -20,7 +20,7 @@
 
   <%= f.input :expiration_period, collection: 1..3, prompt: "Select expiration period", selected: 2 %>
 
-  <%= f.input :producing_area, priority: [ "Brazil" ], collection: [ "Australia", "Brazil", "New Zealand"] %>
+  <%= f.input :producing_area, collection: [ "Australia", "Brazil", "New Zealand"] %>
 
   <%= f.association :simpleformp %>
 <!--

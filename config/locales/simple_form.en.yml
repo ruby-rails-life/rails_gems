@@ -29,3 +29,22 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    labels:
+      simpleform:
+        name: 'name (locale)'
+        content: 'content (locale)'
+    hints:
+      simpleform:
+        name: 'Please input name (locale).'
+        content: 'Please input content (locale).'
+    placeholders:
+      simpleform:
+        name: 'banana (locale)'
+        content: 'content (locale)'
+    include_blanks:
+      simpleform:
+        producing_area: 'Rather not say'
+    prompts:
+      simpleform:
+        expiration_period: 'Select your simpleformp (locale)'
+        simpleformp: 'Select your simpleformp'
