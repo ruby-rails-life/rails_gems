@@ -101,4 +101,5 @@
 【controller】book#index(set routes.rb and locale file) 
 
 * Access  /book, /en/book, /ja/book
-* Create index.html.erb and index.ja.html.erb in app/views/book
+* Create localized templates: index.html.erb and index.ja.html.erb
+* Pluralization
