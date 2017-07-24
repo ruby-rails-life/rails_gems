@@ -87,6 +87,6 @@
 
 ## I18n
 
-【controller】book#index 
+【controller】book#index(set routes.rb and locale file) 
 
 * Access  /book, /en/book, /ja/book
