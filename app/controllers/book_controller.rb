@@ -9,5 +9,6 @@ class BookController < ApplicationController
     I18n.backend.store_translations :ja, thanks: 'ありがとう %{name}!'
     I18n.backend.store_translations :en, inbox: {one: 'one message', other: '%{count} messages'}
     I18n.backend.store_translations :ja, inbox: {one: '１件メッセージ', other: '%{count}件メッセージ'}
+    @no_exist = I18n.t :no_exist
   end
 end

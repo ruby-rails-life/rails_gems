@@ -13,9 +13,14 @@
         </div> 
       </div>
       <div class="row" style="margin-bottom: 10px">
-        <div class="col-md-12">      
+        <div class="col-md-8">      
           <%=t :weather_html %>
-        </div> 
+        </div>
+        <% if false %>
+        <div class="col-md-4">  
+          <%=t :no_exist, raise:true %>
+        </div>
+        <% end %>
       </div>
       <div class="row">
         <div class="col-md-12">
