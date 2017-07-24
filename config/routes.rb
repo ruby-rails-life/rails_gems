@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     
   scope "(:locale)", locale: /en|ja/ do
     root 'home#index'
-    get 'home/index'
+    get 'home', to: 'home#index'
     get 'book', to: 'book#index'
     concern :paginatable do
       get '(page/:page)', action: :index, on: :collection, as: ''
