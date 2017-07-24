@@ -1,6 +1,17 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
+      <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-4">      
+          <%=t :thanks, name: 'beauty' %>
+        </div>
+        <div class="col-md-4">
+          <%=t :inbox, count: 1 %>
+        </div>
+        <div class="col-md-4">
+          <%=t :inbox, count: 2 %>
+        </div> 
+      </div>
       <div class="row">
         <div class="col-md-12">
           <h3><%=t :hello, message: "happy!" %>&nbsp;&nbsp;<%=l Time.now, format: :long %></h3>
