@@ -20,7 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello world %{message}"
+  
+  time:
+    formats:
+      short: "%m%M%Y"
 
   errors:
     messages:
