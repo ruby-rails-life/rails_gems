@@ -1,5 +1,9 @@
 ja:
 
+  breadcrumbs:
+    homepage: ホーム
+    book: 本  
+
   views:
     pagination:
       first: 先頭

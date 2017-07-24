@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  root 'home#index'
-  get 'home/index'
-  
+    
   scope "(:locale)", locale: /en|ja/ do
+    root 'home#index'
+    get 'home/index'
+    get 'book', to: 'book#index'
     concern :paginatable do
       get '(page/:page)', action: :index, on: :collection, as: ''
     end
-    get 'book', to: 'book#index'
     resources :simpleforms, concerns: :paginatable
   end
   

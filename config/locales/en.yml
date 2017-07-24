@@ -40,6 +40,10 @@ en:
       price:
         blank: 'Please fill in your %{attribute}'
 
+  breadcrumbs:
+    homepage: Home
+    book: Book
+
   views:
     pagination:
       first:    "&laquo;"

@@ -16,7 +16,17 @@
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <div class="container">
+      <% if showLocale?(controller.controller_name, controller.action_name) %>
+      <div class="row" style="margin-bottom: 10px;padding-bottom: 5px">
+        <div class="col-md-12">
+          <%= link_to "英語", home_index_url(:locale => 'en') %> |
+          <%= link_to "日本語", home_index_url(:locale => 'ja') %>
+        </div>
+      </div>
+      <% if 'home' != controller.controller_name %>
       <%= render 'shared/breadcrumbs' %>
+      <% end %>
+      <% end %>
       <div class="row">
         <div class="col-md-12">
           <%= yield %>

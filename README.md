@@ -105,4 +105,6 @@
 
 ## breadcrumbs_on_rails
 
+【controller】Application(add breadcrumbs for project)  
+
 * BreadcrumbsOnRails is a simple Ruby on Rails plugin for creating and managing a breadcrumb navigation for a Rails project. 

@@ -11,7 +11,7 @@ class BookController < ApplicationController
     I18n.backend.store_translations :ja, inbox: {one: '１件メッセージ', other: '%{count}件メッセージ'}
     @no_exist = I18n.t :no_exist
 
-    add_breadcrumb "Book", book_path
+    add_breadcrumb I18n.t 'breadcrumbs.book', book_path
 
   end
 end
