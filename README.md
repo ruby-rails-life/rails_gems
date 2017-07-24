@@ -102,7 +102,7 @@
 
 * Create localized templates: 【index.html.erb, index.ja.html.erb】 and Access /book, /en/book, /ja/book
 * Pluralization, html_safe, model 
-* Customize ExceptionHandler:raise error when missing translation->lib/I18n/custom_breadcrumbs_builder.rb
+* Customize ExceptionHandler:raise error when missing translation->lib/I18n/just_raise_exception_handler.rb
 
 ## breadcrumbs_on_rails
 
