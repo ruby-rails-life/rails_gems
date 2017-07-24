@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   protect_from_forgery with: :exception
 
+  I18n.exception_handler = I18n::JustRaiseExceptionHandler.new
   #add_breadcrumb I18n.t("breadcrumbs.homepage"), :home_path
   add_breadcrumb I18n.t("breadcrumbs.homepage"), "home"
 

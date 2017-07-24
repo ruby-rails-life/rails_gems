@@ -101,11 +101,12 @@
 【controller】book#index, simpleforms#new(set routes.rb and locale file) 
 
 * Create localized templates: 【index.html.erb, index.ja.html.erb】 and Access /book, /en/book, /ja/book
-* Pluralization, html_safe, model, raise error when missing translation
+* Pluralization, html_safe, model 
+* Customize ExceptionHandler:raise error when missing translation->lib/I18n/custom_breadcrumbs_builder.rb
 
 ## breadcrumbs_on_rails
 
 【controller】Application(add breadcrumbs for project)  
 
-* BreadcrumbsOnRails is a simple Ruby on Rails plugin for creating and managing a breadcrumb navigation for a Rails project. 
+* A simple Ruby on Rails plugin for creating and managing a breadcrumb navigation for a Rails project. 
 * Customize breadcrumbs->lib/custom_breadcrumbs_builder.rb
