@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
     #@articles = Article.where.has { title =~ 'title1%' }.ordering { title.desc }
     #@articles = Article.joins(:comments).where.has { comments.commenter =~ 'comment1%' }
     #@articles = Article.joins(:comments).where.has { comments.sift(:name_contains, 'comment1') }
+    add_breadcrumb "Articles", articles_path
   end
 
   def new

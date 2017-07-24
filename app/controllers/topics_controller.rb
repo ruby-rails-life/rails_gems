@@ -11,6 +11,7 @@ class TopicsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @topics }
     end
+    add_breadcrumb "Topics", topics_path
   end
 
   # GET /topics/1

@@ -102,3 +102,7 @@
 
 * Create localized templates: 【index.html.erb, index.ja.html.erb】 and Access /book, /en/book, /ja/book
 * Pluralization, html_safe, model, raise error when missing translation
+
+## breadcrumbs_on_rails
+
+* BreadcrumbsOnRails is a simple Ruby on Rails plugin for creating and managing a breadcrumb navigation for a Rails project. 

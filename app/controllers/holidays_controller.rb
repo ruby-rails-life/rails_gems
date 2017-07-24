@@ -4,6 +4,8 @@ class HolidaysController < ApplicationController
     holiday = Holiday.new(date: DateTime.now)
     @holiday_extend = ActiveType.cast(holiday, HolidayExtend)
     @holiday_extend.name = '祝日'
+
+    add_breadcrumb "Holidays", holidays_path
   end
     
   def edit

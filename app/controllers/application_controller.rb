@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   protect_from_forgery with: :exception
 
+  add_breadcrumb "Home", :home_index_path
+
   def default_url_options(options = {})
     { locale: I18n.locale }.merge options
   end

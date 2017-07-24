@@ -1,6 +1,7 @@
 class SimpleformsController < ApplicationController
   def index
     @simpleforms = Simpleform.page(params[:page])
+    add_breadcrumb "Simpleforms", simpleforms_path
   end
 
   def show

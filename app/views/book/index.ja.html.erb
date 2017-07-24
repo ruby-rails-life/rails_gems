@@ -1,99 +1,95 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row" style="margin-bottom: 10px">
-        <div class="col-md-4">      
-          <%=t :thanks, name: '優しい人' %>
-        </div>
-        <div class="col-md-4">
-          <%=t :inbox, count: 1 %>
-        </div>
-        <div class="col-md-4">
-          <%=t :inbox, count: 2 %>
-        </div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="row" style="margin-bottom: 10px">
+      <div class="col-md-4">      
+        <%=t :thanks, name: '優しい人' %>
       </div>
-      <div class="row" style="margin-bottom: 10px">
-        <div class="col-md-12">      
-          <%=t :weather_html %>
-        </div> 
+      <div class="col-md-4">
+        <%=t :inbox, count: 1 %>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h3><%=t :hello, message: "うれしい!" %>&nbsp;&nbsp;<%=l Time.now, format: :long %></h3>
-          <p>Test Class Method in Module : <%= Book.say_today %></p>
-        </div>
+      <div class="col-md-4">
+        <%=t :inbox, count: 2 %>
       </div>
-      <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped">
-            <caption><strong>すべての本</strong></caption>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>タイトル</th>
-                <th>作者</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+    </div>
+    <div class="row" style="margin-bottom: 10px">
+      <div class="col-md-12">      
+        <%=t :weather_html %>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3><%=t :hello, message: "うれしい!" %>&nbsp;&nbsp;<%=l Time.now, format: :long %></h3>
+        <p>Test Class Method in Module : <%= Book.say_today %></p>
       </div>
     </div>
     <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped"">
-            <caption><strong>出版済の本</strong></caption>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>タイトル</th>
-                <th>作者</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books_published.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+      <div class="col-md-12">  
+        <table class="table table-striped">
+          <caption><strong>すべての本</strong></caption>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>タイトル</th>
+              <th>作者</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped"">
-            <caption><strong>出版状況によりソート</strong></caption>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>タイトル</th>
-                <th>作者</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books_order.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+      <div class="col-md-12">  
+        <table class="table table-striped"">
+          <caption><strong>出版済の本</strong></caption>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>タイトル</th>
+              <th>作者</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books_published.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>    
-</div>
+    <div class="row">
+      <div class="col-md-12">  
+        <table class="table table-striped"">
+          <caption><strong>出版状況によりソート</strong></caption>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>タイトル</th>
+              <th>作者</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books_order.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>  

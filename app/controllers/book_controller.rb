@@ -1,6 +1,6 @@
 class BookController < ApplicationController
   include Common
-  
+
   def index
   	@books = Book.all
   	@books_published = Book.publised
@@ -10,5 +10,8 @@ class BookController < ApplicationController
     I18n.backend.store_translations :en, inbox: {one: 'one message', other: '%{count} messages'}
     I18n.backend.store_translations :ja, inbox: {one: '１件メッセージ', other: '%{count}件メッセージ'}
     @no_exist = I18n.t :no_exist
+
+    add_breadcrumb "Book", book_path
+
   end
 end

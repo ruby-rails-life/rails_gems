@@ -1,104 +1,100 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row" style="margin-bottom: 10px">
-        <div class="col-md-4">      
-          <%=t :thanks, name: 'beauty' %>
-        </div>
-        <div class="col-md-4">
-          <%=t :inbox, count: 1 %>
-        </div>
-        <div class="col-md-4">
-          <%=t :inbox, count: 2 %>
-        </div> 
+<div class="row">
+  <div class="col-md-12">
+    <div class="row" style="margin-bottom: 10px">
+      <div class="col-md-4">      
+        <%=t :thanks, name: 'beauty' %>
       </div>
-      <div class="row" style="margin-bottom: 10px">
-        <div class="col-md-8">      
-          <%=t :weather_html %>
-        </div>
-        <% if false %>
-        <div class="col-md-4">  
-          <%=t :no_exist, raise:true %>
-        </div>
-        <% end %>
+      <div class="col-md-4">
+        <%=t :inbox, count: 1 %>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h3><%=t :hello, message: "happy!" %>&nbsp;&nbsp;<%=l Time.now, format: :long %></h3>
-          <p>Test Class Method in Module : <%= Book.say_today %></p>
-        </div>
+      <div class="col-md-4">
+        <%=t :inbox, count: 2 %>
+      </div> 
+    </div>
+    <div class="row" style="margin-bottom: 10px">
+      <div class="col-md-8">      
+        <%=t :weather_html %>
       </div>
-      <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped">
-            <caption><strong>All Books</strong></caption>
-            <thead>
-              <tr>
-                <th>id</th>
-                <th>title</th>
-                <th>author</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+      <% if false %>
+      <div class="col-md-4">  
+        <%=t :no_exist, raise:true %>
+      </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3><%=t :hello, message: "happy!" %>&nbsp;&nbsp;<%=l Time.now, format: :long %></h3>
+        <p>Test Class Method in Module : <%= Book.say_today %></p>
       </div>
     </div>
     <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped"">
-            <caption><strong>Published Books</strong></caption>
-            <thead>
-              <tr>
-                <th>id</th>
-                <th>title</th>
-                <th>author</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books_published.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+      <div class="col-md-12">  
+        <table class="table table-striped">
+          <caption><strong>All Books</strong></caption>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="row">
-        <div class="col-md-12">  
-          <table class="table table-striped"">
-            <caption><strong>Order by state books</strong></caption>
-            <thead>
-              <tr>
-                <th>id</th>
-                <th>title</th>
-                <th>author</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @books_order.each do |book| %>
-              <tr>
-                <td><%= book.id %></td>
-                <td><%= book.title %></td>
-                <td><%= book.show_name? %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+      <div class="col-md-12">  
+        <table class="table table-striped"">
+          <caption><strong>Published Books</strong></caption>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books_published.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>    
+    <div class="row">
+      <div class="col-md-12">  
+        <table class="table table-striped"">
+          <caption><strong>Order by state books</strong></caption>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books_order.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= book.title %></td>
+              <td><%= book.show_name? %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
