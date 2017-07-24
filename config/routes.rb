@@ -5,22 +5,18 @@ Rails.application.routes.draw do
   get 'home/index'
   
   scope "(:locale)", locale: /en|ja/ do
-    #resources :books
+    concern :paginatable do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+    end
     get 'book', to: 'book#index'
+    resources :simpleforms, concerns: :paginatable
   end
-  #get 'book', to: 'book#index'
   
   get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
-  #resources :simpleforms
-
-  concern :paginatable do
-    get '(page/:page)', action: :index, on: :collection, as: ''
-  end
-  resources :simpleforms, concerns: :paginatable
-
+  
   resources :topics
   resources :users
   resources :articles do

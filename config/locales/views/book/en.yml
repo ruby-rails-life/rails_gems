@@ -1,0 +1,6 @@
+en:
+  hello: "Hello world %{message}"
+  
+  time:
+    formats:
+      short: "%m%M%Y" 
