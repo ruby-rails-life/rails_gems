@@ -84,3 +84,9 @@
 【controller】simpleform#index(I18n, Customize view, Create friendly URLs)   
 * [reference_1](http://ruby-rails.hatenadiary.com/entry/20141113/1415874683)
 * [reference_2](https://github.com/kaminari/kaminari)
+
+## I18n
+
+【controller】book#index 
+
+* Access  /book, /en/book, /ja/book

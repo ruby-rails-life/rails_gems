@@ -1,4 +1,6 @@
 ja:
+  hello: "こんにちは"
+
   views:
     pagination:
       first: 先頭

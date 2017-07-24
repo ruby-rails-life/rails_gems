@@ -3,7 +3,13 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
   get 'home/index'
-  get 'book', to: 'book#index'
+  
+  scope "(:locale)", locale: /en|ja/ do
+    #resources :books
+    get 'book', to: 'book#index'
+  end
+  #get 'book', to: 'book#index'
+  
   get 'country', to:'country#index'
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
