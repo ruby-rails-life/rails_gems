@@ -1,6 +1,6 @@
 en:
   hello: "Hello world %{message}"
-  
+  weather_html: <b>The weather is very fine today!</b>
   time:
     formats:
       short: "%m%M%Y" 

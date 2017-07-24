@@ -1,6 +1,6 @@
 ja:
   hello: "こんにちは %{message}"
-  
+  weather_html: <b>今日は良い天気!</b>
   date:
     formats:
       default: "%Y/%m/%d"

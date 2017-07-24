@@ -98,8 +98,8 @@
 
 ## I18n
 
-【controller】book#index(set routes.rb and locale file) 
+【controller】book#index, simpleforms#new(set routes.rb and locale file) 
 
 * Access  /book, /en/book, /ja/book
 * Create localized templates: index.html.erb and index.ja.html.erb
-* Pluralization
+* Pluralization, html_safe, model
