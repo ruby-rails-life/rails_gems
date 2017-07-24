@@ -62,4 +62,6 @@ Rails.application.configure do
     :password => 'パスワード'
   }
 
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+
 end
