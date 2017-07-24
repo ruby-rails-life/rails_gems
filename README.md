@@ -81,5 +81,6 @@
 
 ## kaminari
 
-【controller】simpleform#index(I18n)   
+【controller】simpleform#index(I18n, Customize view)   
 * [reference_1](http://ruby-rails.hatenadiary.com/entry/20141113/1415874683)
+* [reference_2](https://github.com/kaminari/kaminari)

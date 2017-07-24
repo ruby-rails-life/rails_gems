@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <%= page_entries_info @simpleforms %>
+        <%= page_entries_info @simpleforms, entry_name: 'my_simpleform' %>
       </div>
     </div>  
     <div class="row">
@@ -41,7 +41,7 @@
     <div class="row">
       <div class="col-md-12">
         <!-- <%= paginate @simpleforms %> -->
-        <%= paginate(@simpleforms, :window => 2) %>
+        <%= paginate @simpleforms, views_prefix: 'customize_kaminari', :window => 2 %>
       </div>
     </div>    
   </div>
