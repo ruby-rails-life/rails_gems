@@ -1,3 +1,5 @@
+# -*- SkipSchemaAnnotations
+
 class Book < ApplicationRecord
   include CommonModule
 

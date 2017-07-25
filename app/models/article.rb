@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id           :integer          not null, primary key
+#  title        :string(255)
+#  text         :text(65535)
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  picture      :string(255)
+#  muti_picture :json
+#
+
 class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   mount_uploader :picture, PictureUploader

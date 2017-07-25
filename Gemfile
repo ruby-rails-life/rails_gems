@@ -36,6 +36,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'simple_form'
 gem 'kaminari'
 gem "breadcrumbs_on_rails"
+gem 'annotate'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

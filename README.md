@@ -117,3 +117,9 @@
 * When better_errors does not work, add [BetterErrors::Middleware.allow_ip! "0.0.0.0/0"] to config/environments/development.rb
 
 ## rails-footnotes
+
+## annotate
+
+* [reference](https://github.com/ctran/annotate_models)
+
+
