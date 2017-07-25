@@ -118,6 +118,7 @@
 
 ## rails-footnotes
 
+* Customize notes->lib/footnotes/notes/current_user_note.rb
 * [reference](https://github.com/josevalim/rails-footnotes)
 
 ## annotate

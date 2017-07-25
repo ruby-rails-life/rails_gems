@@ -24,4 +24,7 @@ defined?(Footnotes) && Footnotes.setup do |f|
 
   # Allow to open multiple notes :
   # f.multiple_notes = true
+
+  f.notes += [:current_user]
+  
 end
