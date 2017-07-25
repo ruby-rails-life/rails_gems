@@ -77,6 +77,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'rails-footnotes'
   gem 'rubocop', require: false
+  gem 'brakeman', :require => false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

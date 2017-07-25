@@ -86,6 +86,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    brakeman (3.7.0)
     breadcrumbs_on_rails (3.0.1)
     builder (3.2.3)
     byebug (9.0.6)
@@ -451,6 +452,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  brakeman
   breadcrumbs_on_rails
   byebug
   carrierwave
