@@ -127,6 +127,5 @@
 
 ## rubocop
 
-* .rubocop.yml, .rubocop_todo.yml
+* RuboCop is a Ruby static code analyzer(.rubocop.yml, .rubocop_todo.yml)
 * [reference](http://blog-ja.sideci.com/entry/2015/03/12/160441)
-
