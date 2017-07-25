@@ -115,3 +115,5 @@
 
 * Better Errors replaces the standard Rails error page with a much better and more useful error page.
 * When better_errors does not work, add [BetterErrors::Middleware.allow_ip! "0.0.0.0/0"] to config/environments/development.rb
+
+## rails-footnotes
