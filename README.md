@@ -118,6 +118,8 @@
 
 ## rails-footnotes
 
+* [reference](https://github.com/josevalim/rails-footnotes)
+
 ## annotate
 
 * [reference](https://github.com/ctran/annotate_models)
