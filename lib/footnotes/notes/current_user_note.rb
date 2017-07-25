@@ -4,7 +4,7 @@ module Footnotes
       # This method always receives a controller
       #
       def initialize(controller)
-        @current_user = controller.instance_variable_get("@current_user")
+        @current_user = controller.instance_variable_get('@current_user')
       end
 
       # Returns the title that represents this note.

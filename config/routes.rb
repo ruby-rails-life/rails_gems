@@ -71,7 +71,7 @@
 #                          PATCH  /articles/:id(.:format)                           articles#update
 #                          PUT    /articles/:id(.:format)                           articles#update
 #                          DELETE /articles/:id(.:format)                           articles#destroy
-# 
+#
 # Routes for RailsAdmin::Engine:
 #   dashboard GET         /                                      rails_admin/main#dashboard
 #       index GET|POST    /:model_name(.:format)                 rails_admin/main#index
@@ -83,13 +83,13 @@
 #        edit GET|PUT     /:model_name/:id/edit(.:format)        rails_admin/main#edit
 #      delete GET|DELETE  /:model_name/:id/delete(.:format)      rails_admin/main#delete
 # show_in_app GET         /:model_name/:id/show_in_app(.:format) rails_admin/main#show_in_app
-# 
+#
 
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-    
-  scope "(:locale)", locale: /en|ja/ do
+
+  scope '(:locale)', locale: /en|ja/ do
     root 'home#index'
     get 'home', to: 'home#index'
     get 'book', to: 'book#index'
@@ -98,12 +98,12 @@ Rails.application.routes.draw do
     end
     resources :simpleforms, concerns: :paginatable
   end
-  
-  get 'country', to:'country#index'
+
+  get 'country', to: 'country#index'
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
-  
+
   resources :topics
   resources :users
   resources :articles do

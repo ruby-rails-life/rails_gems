@@ -9,5 +9,5 @@
 #
 
 class Simpleformp < ApplicationRecord
-	has_many :simpleforms
+  has_many :simpleforms
 end

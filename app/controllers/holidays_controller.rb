@@ -1,13 +1,12 @@
 class HolidaysController < ApplicationController
-  
   def index
     holiday = Holiday.new(date: DateTime.now)
     @holiday_extend = ActiveType.cast(holiday, HolidayExtend)
     @holiday_extend.name = '祝日'
 
-    add_breadcrumb "Holidays", holidays_path
+    add_breadcrumb 'Holidays', holidays_path
   end
-    
+
   def edit
     @holidays_form = HolidaysForm.new
   end
@@ -21,8 +20,8 @@ class HolidaysController < ApplicationController
   end
 
   private
-    def holiday_params
-      params.require(:holidays_form).permit(holidays_attributes:[:date])
-    end
 
+  def holiday_params
+    params.require(:holidays_form).permit(holidays_attributes: [:date])
+  end
 end

@@ -26,5 +26,4 @@ defined?(Footnotes) && Footnotes.setup do |f|
   # f.multiple_notes = true
 
   f.notes += [:current_user]
-  
 end

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -9,11 +9,11 @@ ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = 'YES'
 gem 'nokogiri'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.3'
 gem 'bootstrap-sass'
+gem 'rails', '~> 5.0.3'
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+# gem 'sqlite3'
 gem 'mysql2'
 
 gem 'rails-i18n'
@@ -23,20 +23,20 @@ gem 'baby_squeel'
 
 gem 'config'
 
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'fog'
 gem 'active_decorator'
 gem 'active_hash'
 gem 'active_type'
 gem 'acts_as_paranoid', '~> 0.5.0'
-gem 'seed_dump'
-gem 'devise'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-gem 'simple_form'
-gem 'kaminari'
-gem "breadcrumbs_on_rails"
 gem 'annotate'
+gem 'breadcrumbs_on_rails'
+gem 'carrierwave'
+gem 'devise'
+gem 'fog'
+gem 'kaminari'
+gem 'mini_magick'
+gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
+gem 'seed_dump'
+gem 'simple_form'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -70,15 +70,16 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails-footnotes'
+  gem 'rubocop', require: false
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

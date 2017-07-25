@@ -3,8 +3,8 @@ module CommonModule
 
   # callback、scope
   included do
-    #before_initialize :set_del_flag
-    scope :publised, -> { where(state: "published") }
+    # before_initialize :set_del_flag
+    scope :publised, -> { where(state: 'published') }
   end
 
   def set_del_flag
@@ -17,14 +17,13 @@ module CommonModule
       author_name
     else
       ''
-    end    
+    end
   end
 
-  # クラスメソッド  
+  # クラスメソッド
   module ClassMethods
     def say_today
       Time.zone.now
     end
   end
-
 end

@@ -1,7 +1,7 @@
 class SimpleformsController < ApplicationController
   def index
     @simpleforms = Simpleform.page(params[:page])
-    add_breadcrumb "Simpleforms", simpleforms_path
+    add_breadcrumb 'Simpleforms', simpleforms_path
   end
 
   def show
@@ -11,7 +11,7 @@ class SimpleformsController < ApplicationController
   def new
     @simpleform = Simpleform.new
   end
-  
+
   def edit
     @simpleform = Simpleform.find(params[:id])
   end
@@ -28,7 +28,7 @@ class SimpleformsController < ApplicationController
       end
     end
   end
-  
+
   def update
     @simpleform = Simpleform.find(params[:id])
     respond_to do |format|
@@ -50,11 +50,10 @@ class SimpleformsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
 
-    def simpleform_params
-      params.require(:simpleform).permit(:name, :content, :popular, :production_date, :expiration_period, :producing_area, :simpleformp_id, {:flavor_ids => []}, :price)
-    end
-
+  def simpleform_params
+    params.require(:simpleform).permit(:name, :content, :popular, :production_date, :expiration_period, :producing_area, :simpleformp_id, {flavor_ids: []}, :price)
+  end
 end

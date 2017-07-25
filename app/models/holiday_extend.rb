@@ -9,5 +9,5 @@
 #
 
 class HolidayExtend < ActiveType::Record[Holiday]
-	attribute :name, :string
+  attribute :name, :string
 end
