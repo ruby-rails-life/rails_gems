@@ -129,3 +129,7 @@
 
 * RuboCop is a Ruby static code analyzer(.rubocop.yml, .rubocop_todo.yml)
 * [reference](http://blog-ja.sideci.com/entry/2015/03/12/160441)
+
+## brakeman
+
+* Brakeman is an open source static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
