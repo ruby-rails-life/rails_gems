@@ -2,7 +2,8 @@
 
 【gem一覧】  
 
-* [初心者向け](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)  
+* [reference_1](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)
+* [reference_2](http://labs.timedia.co.jp/2014/02/railsgem.html)
 
 ## ransack
 
@@ -156,5 +157,5 @@
 ## view_source_map
 
 * This is a Rails plugin to insert the path name of a rendered partial view as HTML comment in development environment.
-* [reference_1](https://github.com/r7kamura/view_source_map)
+* [reference](https://github.com/r7kamura/view_source_map)
 
