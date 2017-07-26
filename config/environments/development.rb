@@ -29,7 +29,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -53,14 +53,15 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = {host: 'localhost:3000'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    authentication: :plain,
-    user_name: 'メールアドレス',
-    password: 'パスワード'
-  }
+  config.action_mailer.delivery_method = :letter_opener_web
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #  address: 'smtp.gmail.com',
+  #  port: 587,
+  #  authentication: :plain,
+  #  user_name: 'メールアドレス',
+  #  password: 'パスワード'
+  # }
 
   BetterErrors::Middleware.allow_ip! '0.0.0.0/0'
 end

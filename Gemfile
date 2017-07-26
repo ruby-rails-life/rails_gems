@@ -78,6 +78,8 @@ group :development do
   gem 'rails-footnotes'
   gem 'rubocop', require: false
   gem 'brakeman', :require => false
+  gem 'letter_opener'
+  gem 'letter_opener_web'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

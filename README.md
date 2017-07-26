@@ -133,3 +133,7 @@
 ## brakeman
 
 * Brakeman is an open source static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
+
+## letter_opener_web
+
+* [reference](http://qiita.com/7sgg_m/items/178e0d90fc55c5716474)
