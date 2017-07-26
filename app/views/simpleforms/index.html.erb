@@ -1,5 +1,32 @@
 <div class="row">
   <div class="col-md-12">
+    <div class="row" style="margin-bottom: 10px;padding-bottom: 5px;border-bottom-style: ridge;">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <caption>autolink</caption>
+          <tbody>
+            <tr>
+              <td>all</td>
+              <td><%= auto_link @autolink%></td>
+            </tr>
+            <tr>
+              <td>:link->:urls</td>
+              <td><%= auto_link @autolink, :link => :urls %></td>
+            </tr>
+            <tr>
+              <td>:link->:email_addresses</td>
+              <td><%= auto_link @autolink, :link => :email_addresses %></td>
+            </tr>
+            <tr>
+              <td>truncate text length</td>
+              <td><%= auto_link(@autolink, :html => { :target => '_blank' }) do |text|
+                    truncate(text, :length => 6)
+                   end %></td>         
+            </tr>
+          </tbody>  
+        </table> 
+      </div>
+    </div>
     <div class="row" style="margin-bottom: 10px;padding-bottom: 5px">
       <div class="col-md-12">
         <%= link_to 'New Simpleform', new_simpleform_path %>

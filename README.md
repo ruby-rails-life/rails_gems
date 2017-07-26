@@ -159,3 +159,9 @@
 * This is a Rails plugin to insert the path name of a rendered partial view as HTML comment in development environment.
 * [reference](https://github.com/r7kamura/view_source_map)
 
+## rails_autolink
+
+【controller】simpleforms#index
+
+* [reference](https://github.com/tenderlove/rails_autolink)
+

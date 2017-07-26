@@ -2,6 +2,9 @@ class SimpleformsController < ApplicationController
   def index
     @simpleforms = Simpleform.page(params[:page])
     add_breadcrumb 'Simpleforms', simpleforms_path
+    @autolink = <<-"AUTOLINK"
+      Test url http://epochtimes.jp  test@gmail.com   
+    AUTOLINK
   end
 
   def show
