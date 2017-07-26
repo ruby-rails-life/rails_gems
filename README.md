@@ -152,3 +152,9 @@
 
 * [reference_1](http://ruby-rails.hatenadiary.com/entry/20141218/1418901424)
 * [reference_2](http://qiita.com/tyamagu2/items/5f8dddfe079064b64d5e)
+
+## view_source_map
+
+* This is a Rails plugin to insert the path name of a rendered partial view as HTML comment in development environment.
+* [reference_1](https://github.com/r7kamura/view_source_map)
+

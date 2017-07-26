@@ -82,6 +82,7 @@ group :development do
   gem 'brakeman', :require => false
   gem 'letter_opener'
   gem 'letter_opener_web'
+  gem 'view_source_map'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
