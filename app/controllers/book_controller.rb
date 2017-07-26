@@ -11,6 +11,8 @@ class BookController < ApplicationController
     I18n.backend.store_translations :ja, inbox: {one: '１件メッセージ', other: '%{count}件メッセージ'}
     # @no_exist = I18n.t :no_exist
     add_breadcrumb I18n.t 'breadcrumbs.book', book_path
+
+    @times = customizetime
   end
 
   def bulkinsert
@@ -22,5 +24,23 @@ class BookController < ApplicationController
     Book.import books
     redirect_to :action=> "index"
   end
+  
+  private 
+    def customizetime
+      times = []
+      times << Time.zone.now
+      Timecop.travel(Time.now + 1.years)
+      times << Time.zone.now
+      Timecop.return
+      Timecop.freeze(10.days.ago)
+      sleep 10
+      times << Time.zone.now
+      Timecop.return
+      Timecop.scale(3600)
+      sleep 10
+      times << Time.zone.now
+      Timecop.return
+      times
+    end
 
 end

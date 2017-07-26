@@ -145,3 +145,10 @@
 ## activerecord-import
 
 【controller】book#bulkinsert  
+
+## timecop
+
+【controller】book#index  
+
+* [reference_1](http://ruby-rails.hatenadiary.com/entry/20141218/1418901424)
+* [reference_2](http://qiita.com/tyamagu2/items/5f8dddfe079064b64d5e)
