@@ -1,8 +1,8 @@
 # rails_gems
 
-gem一覧  
+【gem一覧】  
 
-* [初心者](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)  
+* [初心者向け](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)  
 
 ## ransack
 
