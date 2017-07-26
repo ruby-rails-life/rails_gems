@@ -37,6 +37,7 @@ gem 'mini_magick'
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 gem 'seed_dump'
 gem 'simple_form'
+gem 'activerecord-import'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

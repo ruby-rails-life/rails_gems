@@ -97,6 +97,7 @@ Rails.application.routes.draw do
     root 'home#index'
     get 'home', to: 'home#index'
     get 'book', to: 'book#index'
+    get 'book/bulkinsert', to: 'book#bulkinsert'
     concern :paginatable do
       get '(page/:page)', action: :index, on: :collection, as: ''
     end
