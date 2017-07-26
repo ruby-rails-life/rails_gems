@@ -1,5 +1,9 @@
 # rails_gems
 
+gem一覧  
+
+* [初心者](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)  
+
 ## ransack
 
 【controller】topics#index
