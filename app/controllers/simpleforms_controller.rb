@@ -57,6 +57,7 @@ class SimpleformsController < ApplicationController
   private
 
   def simpleform_params
-    params.require(:simpleform).permit(:name, :content, :popular, :production_date, :expiration_period, :producing_area, :simpleformp_id, {flavor_ids: []}, :price)
+    # params.require(:simpleform).permit(:name, :content, :popular, :season_suitable, :production_date, :expiration_period, :producing_area, :simpleformp_id, {flavor_ids: []}, :price)
+    params.require(:simpleform).permit(:name, :content, :popular, {season_suitable: []}, :production_date, :expiration_period, :producing_area, :simpleformp_id, {flavor_ids: []}, :price)
   end
 end

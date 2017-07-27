@@ -118,6 +118,8 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    enumerize (2.1.2)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     excon (0.57.1)
     execjs (2.7.0)
@@ -478,6 +480,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config
   devise
+  enumerize
   fog
   jbuilder (~> 2.5)
   jquery-rails

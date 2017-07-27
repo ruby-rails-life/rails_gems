@@ -84,6 +84,7 @@ group :development do
   gem 'letter_opener_web'
   gem 'view_source_map'
   gem 'rails_autolink'
+  gem 'enumerize'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

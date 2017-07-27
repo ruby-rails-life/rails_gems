@@ -165,3 +165,10 @@
 
 * [reference](https://github.com/tenderlove/rails_autolink)
 
+## enumerize
+
+【controller】simpleforms(season_suitable)
+
+* [reference](https://github.com/brainspec/enumerize)
+
+

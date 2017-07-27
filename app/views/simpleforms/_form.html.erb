@@ -13,6 +13,8 @@
 -->
 
   <%= f.input :popular, as: :boolean, checked_value: true, unchecked_value: false %>
+  
+  <%= f.input :season_suitable, :include_blank =>false %> 
 
   <%= f.input :production_date, as: :date, start_year: Date.today.year - 90,
                               end_year: Date.today.year - 12, discard_day: true,

@@ -25,10 +25,20 @@
 #
 
 class Simpleform < ApplicationRecord
+  extend Enumerize
+
   paginates_per 1
   belongs_to :simpleformp
   has_and_belongs_to_many :flavors
   validates :name, presence: true
   validates :price, presence: true
   validates :content, presence: true
+
+  # enumerize :season_suitable, in: [:spring, :summer, :autumn, :winter], default: :summer
+  # enumerize :season_suitable, in: %w[spring summer autumn winter], i18n_scope: "season_suitable"
+  # enumerize :season_suitable, in: %w[spring summer autumn winter], i18n_scope: "season_suitable", predicates: true
+  # enumerize :season_suitable, in: %w[spring summer autumn winter], i18n_scope: "season_suitable", predicates: { prefix: true }
+  # enumerize :season_suitable, in: {:spring => "1", :summer => "2", :autumn => "3", :winter => "4"}
+  # enumerize :season_suitable, in: [:spring, :summer, :autumn, :winter], scope: true
+  enumerize :season_suitable, in: [:spring, :summer, :autumn, :winter], multiple: true
 end

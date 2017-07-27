@@ -45,6 +45,7 @@
               <th>Id</th>
               <th>Name</th>
               <th>Popular</th>
+              <th>Suitable for season</th>
               <th>Simpleformp</th>
             </tr>
           </thead>
@@ -54,6 +55,7 @@
               <td><%= simpleform.id %></td>
               <td><%= simpleform.name %></td>
               <td><% if simpleform.popular %>It is very popular<% end %></td>
+              <td><%= simpleform.season_suitable %></td>
               <td><% if simpleform.simpleformp %><%= simpleform.simpleformp.name %><% end %></td>
               <td><% if simpleform.flavors %>Flavor<% end %></td>
               <td><%= link_to 'Show', simpleform %></td>

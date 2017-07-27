@@ -15,6 +15,12 @@
           <td><% if @simpleform.popular %>It is very popular<% end %></td>
         </tr>
         <tr>
+          <td>Suitable for season</td>
+          <td>
+            <% if false %><%= @simpleform.season_suitable_text %><% end %>
+          </td>
+        </tr>
+        <tr>
           <td>Production date</td>
           <td><%= @simpleform.production_date %></td>
         </tr>
