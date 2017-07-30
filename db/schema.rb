@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723084346) do
+ActiveRecord::Schema.define(version: 20170729171448) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 20170723084346) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "materials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.integer  "universe_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["universe_id"], name: "index_materials_on_universe_id", using: :btree
   end
 
   create_table "paranoiacs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -117,6 +125,12 @@ ActiveRecord::Schema.define(version: 20170723084346) do
     t.index ["user_id"], name: "index_topics_on_user_id", using: :btree
   end
 
+  create_table "universes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at",                          null: false
@@ -145,6 +159,7 @@ ActiveRecord::Schema.define(version: 20170723084346) do
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "materials", "universes"
   add_foreign_key "paranoids", "paranoiacs"
   add_foreign_key "simpleforms", "simpleformps"
   add_foreign_key "topics", "users"

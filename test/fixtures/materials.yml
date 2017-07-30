@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: materials
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  universe_id :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_materials_on_universe_id  (universe_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (universe_id => universes.id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  universe: one
+
+two:
+  name: MyString
+  universe: two

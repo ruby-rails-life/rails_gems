@@ -102,6 +102,9 @@ Rails.application.routes.draw do
       get '(page/:page)', action: :index, on: :collection, as: ''
     end
     resources :simpleforms, concerns: :paginatable
+    resources :universes do
+      resources :materials, shallow: true
+    end  
   end
 
   get 'country', to: 'country#index'
