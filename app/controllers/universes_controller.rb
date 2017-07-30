@@ -1,5 +1,5 @@
 class UniversesController < ApplicationController
-  before_action :set_universe, only: [:show, :edit, :update, :destroy]
+  before_action :set_universe, only: [:show, :edit, :update, :destroy, :preview]
 
   # GET /universes
   # GET /universes.json
@@ -7,6 +7,15 @@ class UniversesController < ApplicationController
     @universes = Universe.all
     add_breadcrumb 'Universes', universes_path
   end
+
+  def search
+    @universes = Universe.all
+    render :json => @universes    
+  end
+
+  def preview
+    render :json => @universe    
+  end  
 
   # GET /universes/1
   # GET /universes/1.json

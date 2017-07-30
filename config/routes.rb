@@ -102,12 +102,20 @@ Rails.application.routes.draw do
       get '(page/:page)', action: :index, on: :collection, as: ''
     end
     resources :simpleforms, concerns: :paginatable
-    resources :universes do
-      resources :materials, shallow: true
-    end  
+    
+    scope shallow_path: "hope" do
+      resources :universes do
+        get 'preview', on: :member, as: :jsonview
+        #get 'preview', on: :new -> universes_new_preview_path
+        get 'search', on: :collection
+        resources :materials, shallow: true
+      end
+    end
   end
 
   get 'country', to: 'country#index'
+  get 'recountry', to: redirect('country')
+
   get 'holidays', to: 'holidays#index'
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
