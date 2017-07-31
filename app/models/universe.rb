@@ -13,6 +13,7 @@ class Universe < ApplicationRecord
   has_and_belongs_to_many :sands
   has_many :life_universes
   has_many :lives, :through => :life_universes
+  has_many :eachtimes, as: :eachtimeable
   validates :name, presence: true
 
   #accepts_nested_attributes_for :lives	

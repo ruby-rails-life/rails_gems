@@ -11,7 +11,8 @@
 * association:   
 【has_many】universe->material   
 【has_and_belongs_to_many】universe<->sand 1. create join table migration   
-【has_many:through】universe<->life 1. create model   
+【has_many:through】universe<->life 1. create model  
+【polymorphic】universe->eachtime space->eachtime eachtimeable 1. create model 
 
 ## ransack
 

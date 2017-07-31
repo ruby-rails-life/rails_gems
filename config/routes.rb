@@ -108,6 +108,7 @@ Rails.application.routes.draw do
         get 'preview', on: :member, as: :jsonview
         #get 'preview', on: :new -> universes_new_preview_path
         get 'search', on: :collection
+        resources :eachtimes
         resources :materials, shallow: true
       end
     end

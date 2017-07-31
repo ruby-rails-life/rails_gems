@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731070855) do
+ActiveRecord::Schema.define(version: 20170731093703) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 20170731070855) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["article_id"], name: "index_comments_on_article_id", using: :btree
+  end
+
+  create_table "eachtimes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.integer  "eachtimeable_id"
+    t.string   "eachtimeable_type"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["eachtimeable_id", "eachtimeable_type"], name: "index_eachtimes_on_eachtimeable_id_and_eachtimeable_type", using: :btree
   end
 
   create_table "flavors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -142,6 +151,12 @@ ActiveRecord::Schema.define(version: 20170731070855) do
     t.integer  "simpleformp_id"
     t.integer  "price"
     t.index ["simpleformp_id"], name: "index_simpleforms_on_simpleformp_id", using: :btree
+  end
+
+  create_table "spaces", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

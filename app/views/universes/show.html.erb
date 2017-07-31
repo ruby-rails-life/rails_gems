@@ -40,7 +40,23 @@
     <h2>Add a material:</h2>
     <%= render "materials/form" %>
   </div>
+</div>
+
+<div class="row" style="margin-bottom: 10px">
+  <div class="col-md-12">
+    <h2>Eachtimes【polymorphic】</h2>
+    <% if @universe.eachtimes.present? %>
+    <%= render @universe.eachtimes %>
+    <% end %>
+  </div>
 </div>   
+
+<div class="row" style="margin-bottom: 10px">
+  <div class="col-md-12">
+    <h2>Add a eachtime:</h2>
+    <%= render "eachtimes/form" %>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-12">
