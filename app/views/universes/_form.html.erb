@@ -1,11 +1,7 @@
 <%= simple_form_for(@universe) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<%= f.input :name, placeholder: '宇宙' %>
+<%= f.association :sands %>
+<%= f.button :submit, 'Create', :class => 'btn-primary' %>
+ 
 <% end %>

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: universes
+# Table name: sands
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -8,8 +8,6 @@
 #  updated_at :datetime         not null
 #
 
-class Universe < ApplicationRecord
-  has_many :materials, dependent: :destroy
-  has_and_belongs_to_many :sands
-  validates :name, presence: true	
+class Sand < ApplicationRecord
+	has_and_belongs_to_many :universes
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170729171448) do
+ActiveRecord::Schema.define(version: 20170731013552) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -93,6 +93,19 @@ ActiveRecord::Schema.define(version: 20170729171448) do
   create_table "roles_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id", null: false
     t.integer "role_id", null: false
+  end
+
+  create_table "sands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sands_universes", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "sand_id",     null: false
+    t.integer "universe_id", null: false
+    t.index ["sand_id", "universe_id"], name: "index_sands_universes_on_sand_id_and_universe_id", using: :btree
+    t.index ["universe_id", "sand_id"], name: "index_sands_universes_on_universe_id_and_sand_id", using: :btree
   end
 
   create_table "simpleformps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

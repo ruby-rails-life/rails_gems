@@ -3,9 +3,21 @@
     <strong>Name:</strong><%= @universe.name %>
   </div>
 </div>
+
 <div class="row" style="margin-bottom: 10px">
   <div class="col-md-12">
-    <h2>Materials</h2>
+    <h2>Sands【has_and_belongs_to_many】</h2>
+    <% if @universe.sands.present? %>
+      <% @universe.sands.each do |sand| %>
+        <%= sand.name %>|
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 10px">
+  <div class="col-md-12">
+    <h2>Materials【has_many】</h2>
     <% if @universe.materials.present? %>
     <%= render @universe.materials %>
     <% end %>
