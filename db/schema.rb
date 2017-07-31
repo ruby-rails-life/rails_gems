@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731013552) do
+ActiveRecord::Schema.define(version: 20170731070855) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -53,6 +53,21 @@ ActiveRecord::Schema.define(version: 20170731013552) do
 
   create_table "holidays", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "life_universes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "life_id"
+    t.integer  "universe_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["life_id"], name: "index_life_universes_on_life_id", using: :btree
+    t.index ["universe_id"], name: "index_life_universes_on_universe_id", using: :btree
+  end
+
+  create_table "lives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -172,6 +187,8 @@ ActiveRecord::Schema.define(version: 20170731013552) do
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "life_universes", "lives"
+  add_foreign_key "life_universes", "universes"
   add_foreign_key "materials", "universes"
   add_foreign_key "paranoids", "paranoiacs"
   add_foreign_key "simpleforms", "simpleformps"

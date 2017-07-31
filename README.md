@@ -5,10 +5,13 @@
 * [reference_1](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)
 * [reference_2](http://labs.timedia.co.jp/2014/02/railsgem.html)  
 
-【memo】
+【memo】ation
 
 * routes:【controller】universe
-* association:【has_and_belongs_to_many】universe<->sand|【has_many】universe->material
+* association:
+【has_many】universe->material
+【has_and_belongs_to_many】universe<->sand 1. create join table migration
+【has_many:through】universe<->life 1. create model
 
 ## ransack
 

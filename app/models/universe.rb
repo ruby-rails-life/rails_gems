@@ -11,5 +11,9 @@
 class Universe < ApplicationRecord
   has_many :materials, dependent: :destroy
   has_and_belongs_to_many :sands
-  validates :name, presence: true	
+  has_many :life_universes
+  has_many :lives, :through => :life_universes
+  validates :name, presence: true
+
+  #accepts_nested_attributes_for :lives	
 end

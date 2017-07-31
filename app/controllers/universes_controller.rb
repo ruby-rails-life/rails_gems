@@ -25,12 +25,10 @@ class UniversesController < ApplicationController
   # GET /universes/new
   def new
     @universe = Universe.new
-    @sands = Sand.all
   end
 
   # GET /universes/1/edit
   def edit
-    @sands = Sand.all
   end
 
   # POST /universes
@@ -81,6 +79,6 @@ class UniversesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def universe_params
-      params.require(:universe).permit(:name, {sand_ids: []})
+      params.require(:universe).permit(:name, {sand_ids: []}, {life_ids: []})
     end
 end

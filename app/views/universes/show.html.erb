@@ -17,6 +17,17 @@
 
 <div class="row" style="margin-bottom: 10px">
   <div class="col-md-12">
+    <h2>Lives【has_many:through】</h2>
+    <% if @universe.lives.present? %>
+      <% @universe.lives.each do |life| %>
+        <%= life.name %>|
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 10px">
+  <div class="col-md-12">
     <h2>Materials【has_many】</h2>
     <% if @universe.materials.present? %>
     <%= render @universe.materials %>
