@@ -18,5 +18,5 @@
 #
 
 class Material < ApplicationRecord
-  belongs_to :universe, counter_cache: true
+  belongs_to :universe, counter_cache: true, touch: true
 end
