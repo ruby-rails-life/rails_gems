@@ -10,7 +10,7 @@
 #
 
 class Universe < ApplicationRecord
-  has_many :materials, dependent: :destroy
+  has_many :materials, -> { order('name desc') }, dependent: :destroy
   has_and_belongs_to_many :sands
   has_many :life_universes
   has_many :lives, :through => :life_universes
