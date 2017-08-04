@@ -11,11 +11,11 @@
 * association:   
 【has_many】universe->material   
 【has_and_belongs_to_many】universe<->sand 1. generate join table migration   
-【has_many:through】universe<->life 1. generate model life_universe
-【polymorphic】universe->eachtime space->eachtime eachtimeable 1. generate model eachtime
-【counter_cache: true】universe(add materials_count column)->material(counter_cache: true)
-【touch: true】universe->material(touch: true)
-【Single Table Inheritance】generate model car --parent=Vehicle
+【has_many:through】universe<->life 1. generate model life_universe  
+【polymorphic】universe->eachtime space->eachtime eachtimeable 1. generate model eachtime  
+【counter_cache: true】universe(add materials_count column)->material(counter_cache: true)  
+【touch: true】universe->material(touch: true)  
+【Single Table Inheritance】generate model car --parent=Vehicle  
 
 ## ransack
 
