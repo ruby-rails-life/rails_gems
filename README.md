@@ -5,7 +5,7 @@
 * [reference_1](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)
 * [reference_2](http://labs.timedia.co.jp/2014/02/railsgem.html)  
 
-【memo】ation
+【memo】  
 
 * routes:【controller】universe
 * association:   
