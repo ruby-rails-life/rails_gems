@@ -185,4 +185,7 @@
 
 ## rspec-rails
 
-【model】mountain->spec/models/mountain_spec.rb
+【model】mountain->spec/models/mountain_spec.rb  
+context,let  
+
+* [reference](http://qiita.com/jnchito/items/42193d066bd61c740612)  
