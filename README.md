@@ -183,4 +183,6 @@
 
 * [reference](https://github.com/brainspec/enumerize)
 
+## rspec-rails
 
+【model】mountain->spec/models/mountain_spec.rb
