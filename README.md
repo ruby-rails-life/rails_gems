@@ -9,13 +9,13 @@
 
 * routes:【controller】universe
 * association:   
-【has_many】universe->material   
-【has_and_belongs_to_many】universe<->sand 1. generate join table migration   
-【has_many:through】universe<->life 1. generate model life_universe  
-【polymorphic】universe->eachtime space->eachtime eachtimeable 1. generate model eachtime  
-【counter_cache: true】universe(add materials_count column)->material(counter_cache: true)  
-【touch: true】universe->material(touch: true)  
-【Single Table Inheritance】generate model car --parent=Vehicle  
+1.has_many | universe->material   
+2.has_and_belongs_to_many | universe<->sand 1. generate join table migration   
+3.has_many:through | universe<->life 1. generate model life_universe  
+4.polymorphic | universe->eachtime space->eachtime eachtimeable 1. generate model eachtime  
+5.counter_cache: true | universe(add materials_count column)->material(counter_cache: true)  
+6.touch: true | universe->material(touch: true)  
+7.Single Table Inheritance | generate model car --parent=Vehicle  
 
 ## ransack
 
@@ -186,7 +186,8 @@
 ## rspec-rails
 
 【model】mountain->spec/models/mountain_spec.rb  
-1. context,let,subject  
-2. shared_examples and it_behaves_like    
+1.context,let,subject  
+2.shared_examples and it_behaves_like 
+3.shared_context and include_context   
 
 * [reference](http://qiita.com/jnchito/items/42193d066bd61c740612)  

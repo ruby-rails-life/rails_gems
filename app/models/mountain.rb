@@ -11,10 +11,12 @@
 
 class Mountain < ApplicationRecord
   validates :name, presence: true
+  
   def initialize(name:, age:)
     @name = name
     @age = age
   end
+  
   def greet
     if @age.blank?
       "年齢不明"	
@@ -23,5 +25,9 @@ class Mountain < ApplicationRecord
     else
       "僕は#{@name}です。"
     end
+  end
+
+  def child?
+    @age <= 12
   end
 end

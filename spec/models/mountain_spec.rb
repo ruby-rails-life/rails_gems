@@ -16,7 +16,7 @@ RSpec.describe Mountain, type: :model do
   #  mountain = Mountain.new
   #  expect(mountain).not_to be_valid
   #end
-  describe '#greet' do
+  #describe '#greet' do
     # 1
     # it '12歳以下の場合、ひらがなで答えること' do
     #   mountain = Mountain.new(name: 'たろう', age: 12)
@@ -142,32 +142,89 @@ RSpec.describe Mountain, type: :model do
     #   it { is_expected.to eq '僕はたろうです。' }
     # end
 
-    let(:mountain) { Mountain.new(name: 'たろう', age: age) }
-    subject { mountain.greet }
+    # let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+    # subject { mountain.greet }
 
-    shared_examples '子どものあいさつ' do
+    # shared_examples '子どものあいさつ' do
+    #   it { is_expected.to eq 'ぼくはたろうだよ。' }
+    # end
+    # context '0歳の場合' do
+    #   let(:age) { 0 }
+    #   it_behaves_like '子どものあいさつ'
+    # end
+    # context '12歳の場合' do
+    #   let(:age) { 12 }
+    #   it_behaves_like '子どものあいさつ'
+    # end
+
+    # shared_examples '大人のあいさつ' do
+    #   it { is_expected.to eq '僕はたろうです。' }
+    # end
+    # context '13歳の場合' do
+    #   let(:age) { 13 }
+    #   it_behaves_like '大人のあいさつ'
+    # end
+    # context '100歳の場合' do
+    #   let(:age) { 100 }
+    #   it_behaves_like '大人のあいさつ'
+    # end
+    
+  #   9 shared_context and include_context
+  #   let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+  #   subject { mountain.greet }
+  #   context '12歳以下の場合' do
+  #     let(:age) { 12 }
+  #     it { is_expected.to eq 'ぼくはたろうだよ。' }
+  #   end
+  #   context '13歳以上の場合' do
+  #     let(:age) { 13 }
+  #     it { is_expected.to eq '僕はたろうです。' }
+  #   end
+  # end
+
+  # describe '#child?' do
+  #   let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+  #   subject { mountain.child? }
+  #   context '12歳以下の場合' do
+  #     let(:age) { 12 }
+  #     it { is_expected.to eq true }
+  #   end
+  #   context '13歳以上の場合' do
+  #     let(:age) { 13 }
+  #     it { is_expected.to eq false }
+  #   end
+  # end
+
+  let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+  shared_context '12歳の場合' do
+    let(:age) { 12 }
+  end
+  shared_context '13歳の場合' do
+    let(:age) { 13 }
+  end
+
+  describe '#greet' do
+    subject { mountain.greet }
+    context '12歳以下の場合' do
+      include_context '12歳の場合'
       it { is_expected.to eq 'ぼくはたろうだよ。' }
     end
-    context '0歳の場合' do
-      let(:age) { 0 }
-      it_behaves_like '子どものあいさつ'
-    end
-    context '12歳の場合' do
-      let(:age) { 12 }
-      it_behaves_like '子どものあいさつ'
-    end
-
-    shared_examples '大人のあいさつ' do
+    context '13歳以上の場合' do
+      include_context '13歳の場合'
       it { is_expected.to eq '僕はたろうです。' }
     end
-    context '13歳の場合' do
-      let(:age) { 13 }
-      it_behaves_like '大人のあいさつ'
-    end
-    context '100歳の場合' do
-      let(:age) { 100 }
-      it_behaves_like '大人のあいさつ'
-    end
-
   end
+
+  describe '#child?' do
+    subject { mountain.child? }
+    context '12歳以下の場合' do
+      include_context '12歳の場合'
+      it { is_expected.to eq true }
+    end
+    context '13歳以上の場合' do
+      include_context '13歳の場合'
+      it { is_expected.to eq false }
+    end
+  end
+
 end
