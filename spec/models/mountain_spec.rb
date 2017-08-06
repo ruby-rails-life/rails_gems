@@ -81,19 +81,46 @@ RSpec.describe Mountain, type: :model do
     #   end
     # end
     
-    let(:mountain) { Mountain.new(params) }
-    let(:params) { { name: 'たろう', age: age } }
+    # 5 let
+    # let(:mountain) { Mountain.new(params) }
+    # let(:params) { { name: 'たろう', age: age } }
+    # context '12歳以下の場合' do
+    #   let(:age) { 12 }
+    #   it 'ひらがなで答えること' do
+    #     expect(mountain.greet).to eq 'ぼくはたろうだよ。'
+    #   end
+    # end
+    # context '13歳以上の場合' do
+    #   let(:age) { 13 }
+    #   it '漢字で答えること' do
+    #     expect(mountain.greet).to eq '僕はたろうです。'
+    #   end
+    # end
+    
+    # 6 subject
+    # let(:mountain) { Mountain.new(params) }
+    # let(:params) { { name: 'たろう', age: age } }
+    # subject { mountain.greet }
+    # context '12歳以下の場合' do
+    #   let(:age) { 12 }
+    #   it { is_expected.to eq 'ぼくはたろうだよ。' }
+    # end
+    # context '13歳以上の場合' do
+    #   let(:age) { 13 }
+    #   it { is_expected.to eq '僕はたろうです。' }
+    # end
+    
+    # 7 Refactoring
+    let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+    subject { mountain.greet }
     context '12歳以下の場合' do
       let(:age) { 12 }
-      it 'ひらがなで答えること' do
-        expect(mountain.greet).to eq 'ぼくはたろうだよ。'
-      end
+      it { is_expected.to eq 'ぼくはたろうだよ。' }
     end
     context '13歳以上の場合' do
       let(:age) { 13 }
-      it '漢字で答えること' do
-        expect(mountain.greet).to eq '僕はたろうです。'
-      end
+      it { is_expected.to eq '僕はたろうです。' }
     end
+
   end
 end
