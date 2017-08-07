@@ -10,24 +10,36 @@
 #
 
 class Mountain < ApplicationRecord
-  validates :name, presence: true
+  # validates :name, presence: true
   
-  def initialize(name:, age:)
-    @name = name
-    @age = age
+  # def initialize(name:, age:)
+  #   @name = name
+  #   @age = age
+  # end
+  
+  # def greet
+  #   if @age.blank?
+  #     "年齢不明"	
+  #   elsif @age <= 12
+  #     "ぼくは#{@name}だよ。"
+  #   else
+  #     "僕は#{@name}です。"
+  #   end
+  # end
+
+  # def child?
+  #   @age <= 12
+  # end
+
+  SEASON = %w(春 夏 秋 冬)
+  def initialize
+    @result = SEASON.sample
   end
-  
-  def greet
-    if @age.blank?
-      "年齢不明"	
-    elsif @age <= 12
-      "ぼくは#{@name}だよ。"
-    else
-      "僕は#{@name}です。"
-    end
+  def summer?
+    @result == '夏'
+  end
+  def self.generate_results(count)
+    Array.new(count){ self.new }
   end
 
-  def child?
-    @age <= 12
-  end
 end

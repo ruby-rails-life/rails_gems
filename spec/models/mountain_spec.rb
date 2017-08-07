@@ -202,36 +202,66 @@ RSpec.describe Mountain, type: :model do
   #   end
   # end
 
-  let(:mountain) { Mountain.new(name: 'たろう', age: age) }
-  shared_context '12歳の場合' do
-    let(:age) { 12 }
-  end
-  shared_context '13歳の場合' do
-    let(:age) { 13 }
-  end
+  # let(:mountain) { Mountain.new(name: 'たろう', age: age) }
+  # shared_context '12歳の場合' do
+  #   let(:age) { 12 }
+  # end
+  # shared_context '13歳の場合' do
+  #   let(:age) { 13 }
+  # end
 
-  xdescribe '#greet' do
-    subject { mountain.greet }
-    context '12歳以下の場合' do
-      include_context '12歳の場合'
-      it { is_expected.to eq 'ぼくはたろうだよ。' }
-    end
-    context '13歳以上の場合' do
-      include_context '13歳の場合'
-      it { is_expected.to eq '僕はたろうです。' }
-    end
-  end
+  # xdescribe '#greet' do
+  #   subject { mountain.greet }
+  #   context '12歳以下の場合' do
+  #     include_context '12歳の場合'
+  #     it { is_expected.to eq 'ぼくはたろうだよ。' }
+  #   end
+  #   context '13歳以上の場合' do
+  #     include_context '13歳の場合'
+  #     it { is_expected.to eq '僕はたろうです。' }
+  #   end
+  # end
 
-  describe '#child?' do
-    subject { mountain.child? }
-    context '12歳以下の場合' do
-      include_context '12歳の場合'
-      it { is_expected.to eq true }
-    end
-    context '13歳以上の場合' do
-      include_context '13歳の場合'
-      xit { is_expected.to eq false }
-    end
-  end
+  # describe '#child?' do
+  #   subject { mountain.child? }
+  #   context '12歳以下の場合' do
+  #     include_context '12歳の場合'
+  #     it { is_expected.to eq true }
+  #   end
+  #   context '13歳以上の場合' do
+  #     include_context '13歳の場合'
+  #     xit { is_expected.to eq false }
+  #   end
+  # end
+  
+  describe '#rspec_memo' do
+    it 'memo_detail' do
+      expect(1 + 2).to be >= 3
+      expect(1).to be_truthy
+      expect(nil).to be_falsey
 
+      x = [1, 2, 3]
+      expect(x.size).to eq 3
+      # x.pop
+      # expect(x.size).to eq 2
+      expect{ x.pop }.to change{ x.size }.from(3).to(2)
+      expect{ x.pop }.to change{ x.size }.by(-1)
+      expect{ x.push(10) }.to change{ x.size }.by(1)
+
+      x = [1, 2, 3]
+      expect(x).to include 1
+      expect(x).to include 1, 3
+      expect(x).to contain_exactly(2, 3, 1) 
+
+      expect{ 1 / 0 }.to raise_error ZeroDivisionError
+    end
+
+    it '夏が約25%になっていること' do
+      results = Mountain.generate_results(10000)
+      summer_count = results.count(&:summer?)
+      probability = summer_count.to_f / 10000 * 100
+      expect(probability).to be_within(1.0).of(25.0)
+    end
+
+  end  
 end
