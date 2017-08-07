@@ -1,21 +1,7 @@
 # rails_gems
 
-【gem list】  
-
 * [reference_1](http://qiita.com/ktsujichan/items/cb9d2e35798b0261cd95)
 * [reference_2](http://labs.timedia.co.jp/2014/02/railsgem.html)  
-
-【memo】  
-
-* routes:【controller】universe
-* association:   
-1.has_many | universe->material   
-2.has_and_belongs_to_many | universe<->sand 1. generate join table migration   
-3.has_many:through | universe<->life 1. generate model life_universe  
-4.polymorphic | universe->eachtime space->eachtime eachtimeable 1. generate model eachtime  
-5.counter_cache: true | universe(add materials_count column)->material(counter_cache: true)  
-6.touch: true | universe->material(touch: true)  
-7.Single Table Inheritance | generate model car --parent=Vehicle  
 
 ## ransack
 
