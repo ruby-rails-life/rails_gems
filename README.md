@@ -186,10 +186,5 @@
 ## rspec-rails
 
 【model】mountain->spec/models/mountain_spec.rb  
-1.context,let,subject  
-2.shared_examples and it_behaves_like   
-3.shared_context and include_context   
-4.pending,xit,xdescribe   
-5.change,include,raise_error,be_within + of       
 
 * [reference](http://qiita.com/jnchito/items/42193d066bd61c740612)  
