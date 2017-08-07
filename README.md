@@ -174,3 +174,10 @@
 【model】mountain->spec/models/mountain_spec.rb  
 
 * [reference](http://qiita.com/jnchito/items/42193d066bd61c740612)  
+
+## factory_girl_rails
+
+【controller】plants->spec/controllers/plants_controller_spec.rb
+
+* spec/support/devise.rb, spec/support/factory_girl.rb, spec/factories/plants.rb  
+* [reference](http://o.inchiki.jp/obbr/159)  
