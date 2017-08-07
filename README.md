@@ -180,4 +180,4 @@
 【controller】plants->spec/controllers/plants_controller_spec.rb
 
 * spec/support/devise.rb, spec/support/factory_girl.rb, spec/factories/plants.rb  
-* [reference](http://o.inchiki.jp/obbr/159)  
+* [reference](http://tech.grooves.com/entry/2015/04/28/173025)  
