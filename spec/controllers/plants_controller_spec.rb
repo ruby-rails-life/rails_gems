@@ -28,7 +28,8 @@ RSpec.describe PlantsController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Plant. As you add validations to Plant, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { FG.attributes_for(:plant) }
+  # let(:valid_attributes) { FG.attributes_for(:plant) }
+  let(:valid_attributes) { FG.attributes_for(:plant, :as_name_color) }
   let(:invalid_attributes) { FG.attributes_for(:invalid_plant) }
 
   # This should return the minimal set of values that should be in the session
@@ -81,24 +82,24 @@ RSpec.describe PlantsController, type: :controller do
       end
     end
 
-    # context "with invalid params" do
-    #   it "returns a success response (i.e. to display the 'new' template)" do
-    #     post :create, params: {plant: invalid_attributes}, session: valid_session
-    #     expect(response).to be_success
-    #   end
-    # end
+    context "with invalid params" do
+      it "returns a success response (i.e. to display the 'new' template)" do
+        post :create, params: {plant: invalid_attributes}, session: valid_session
+        expect(response).to be_success
+      end
+    end
   end
 
   describe "PUT #update" do
     context "with valid params" do
-      # let(:new_attributes) { FG.attributes_for(:new_plant) }
+      let(:new_attributes) { FG.attributes_for(:new_plant) }
 
-      # it "updates the requested plant" do
-      #   plant = Plant.create! valid_attributes
-      #   put :update, params: {id: plant.to_param, plant: new_attributes}, session: valid_session
-      #   plant.reload
-      #   skip("Add assertions for updated state")
-      # end
+      it "updates the requested plant" do
+        plant = Plant.create! valid_attributes
+        put :update, params: {id: plant.to_param, plant: new_attributes}, session: valid_session
+        plant.reload
+        expect(plant[:name]).to eq new_attributes[:name]
+      end
 
       it "redirects to the plant" do
         plant = Plant.create! valid_attributes
@@ -107,13 +108,13 @@ RSpec.describe PlantsController, type: :controller do
       end
     end
 
-    # context "with invalid params" do
-    #   it "returns a success response (i.e. to display the 'edit' template)" do
-    #     plant = Plant.create! valid_attributes
-    #     put :update, params: {id: plant.to_param, plant: invalid_attributes}, session: valid_session
-    #     expect(response).to be_success
-    #   end
-    # end
+    context "with invalid params" do
+      it "returns a success response (i.e. to display the 'edit' template)" do
+        plant = Plant.create! valid_attributes
+        put :update, params: {id: plant.to_param, plant: invalid_attributes}, session: valid_session
+        expect(response).to be_success
+      end
+    end
   end
 
   describe "DELETE #destroy" do

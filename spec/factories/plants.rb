@@ -15,15 +15,22 @@ FactoryGirl.define do
     name "sunflower"
     age 1
     color "yellow"
+
+    trait :as_name_color do
+      name "rainbow"
+      age 4
+      color "colorful"      
+    end
+
   end
 
-  factory :invalid_plant do
+  factory :invalid_plant, class: Plant do
     name ""
     age 2
     color "green"
   end
 
-  factory :new_plant do
+  factory :new_plant, class: Plant do
     name "pinkflower"
     age 3
     color "pink"
