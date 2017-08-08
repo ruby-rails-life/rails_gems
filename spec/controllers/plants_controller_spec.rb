@@ -142,6 +142,12 @@ RSpec.describe PlantsController, type: :controller do
       plant_list = FG.create_list(:sequence_plant, 3)
       expect(plant_list.length).to eq 3
     end
+    it "association test" do
+      plant = FG.build(:association_plant)
+      expect(plant.new_record?).to eq true
+      # expect(plant.mountain.new_record?).to eq false
+      expect(plant.mountain.new_record?).to eq true
+    end
   end
 
 end

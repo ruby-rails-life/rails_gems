@@ -12,4 +12,5 @@
 
 class Plant < ApplicationRecord
 	validates :name, presence: true
+	belongs_to :mountain
 end

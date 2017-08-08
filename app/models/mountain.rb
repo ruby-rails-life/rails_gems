@@ -10,6 +10,7 @@
 #
 
 class Mountain < ApplicationRecord
+  has_many :plants
   # validates :name, presence: true
   
   # def initialize(name:, age:)
@@ -42,8 +43,8 @@ class Mountain < ApplicationRecord
   #   Array.new(count){ self.new }
   # end
 
-  def initialize(name)
-    @name = name
-  end
+  # def initialize(name)
+  #   @name = name
+  # end
 
 end

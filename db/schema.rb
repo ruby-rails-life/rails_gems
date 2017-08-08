@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170807115345) do
+ActiveRecord::Schema.define(version: 20170808124220) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -119,8 +119,10 @@ ActiveRecord::Schema.define(version: 20170807115345) do
     t.string   "name"
     t.integer  "age"
     t.string   "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "mountain_id"
+    t.index ["mountain_id"], name: "index_plants_on_mountain_id", using: :btree
   end
 
   create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -230,6 +232,7 @@ ActiveRecord::Schema.define(version: 20170807115345) do
   add_foreign_key "life_universes", "universes"
   add_foreign_key "materials", "universes"
   add_foreign_key "paranoids", "paranoiacs"
+  add_foreign_key "plants", "mountains"
   add_foreign_key "simpleforms", "simpleformps"
   add_foreign_key "topics", "users"
 end

@@ -21,7 +21,6 @@ FactoryGirl.define do
       age 4
       color "colorful"      
     end
-
   end
 
   factory :invalid_plant, class: Plant do
@@ -41,5 +40,12 @@ FactoryGirl.define do
     age 5
     color "purple"
   end
-  
+
+  factory :association_plant, class: Plant do
+    name "peony"
+    age 6
+    color "pink"
+    #mountain
+    association :mountain, factory: :association_mountain, strategy: :build
+  end
 end
