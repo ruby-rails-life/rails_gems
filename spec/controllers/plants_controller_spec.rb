@@ -148,6 +148,10 @@ RSpec.describe PlantsController, type: :controller do
       # expect(plant.mountain.new_record?).to eq false
       expect(plant.mountain.new_record?).to eq true
     end
+    it "extend test" do
+      plant = FG.build(:age_plant)
+      expect(plant.age).to eq 10
+    end
   end
 
 end

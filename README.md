@@ -180,4 +180,5 @@
 【controller】plants->spec/controllers/plants_controller_spec.rb
 
 * spec/support/devise.rb, spec/support/factory_girl.rb, spec/factories/plants.rb  
-* [reference](http://tech.grooves.com/entry/2015/04/28/173025)  
+* [reference_1](http://tech.grooves.com/entry/2015/04/28/173025) 
+* [reference_2](http://qiita.com/muran001/items/436fd07eba1db18ed622) 

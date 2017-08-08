@@ -48,4 +48,16 @@ FactoryGirl.define do
     #mountain
     association :mountain, factory: :association_mountain, strategy: :build
   end
+
+  factory :extend_plant, class: Plant do
+    name "peach"
+    color "red"
+    # factory :age_plant do
+    #   age 10
+    # end
+  end
+
+  factory :age_plant, parent: :extend_plant do
+    age 10
+  end
 end
