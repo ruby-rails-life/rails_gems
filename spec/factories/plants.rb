@@ -35,5 +35,11 @@ FactoryGirl.define do
     age 3
     color "pink"
   end
+
+  factory :sequence_plant, class: Plant do
+    sequence(:name) { |n| "lavander_#{n}" }
+    age 5
+    color "purple"
+  end
   
 end

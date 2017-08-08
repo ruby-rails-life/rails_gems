@@ -31,15 +31,19 @@ class Mountain < ApplicationRecord
   #   @age <= 12
   # end
 
-  SEASON = %w(春 夏 秋 冬)
-  def initialize
-    @result = SEASON.sample
-  end
-  def summer?
-    @result == '夏'
-  end
-  def self.generate_results(count)
-    Array.new(count){ self.new }
+  # SEASON = %w(春 夏 秋 冬)
+  # def initialize
+  #   @result = SEASON.sample
+  # end
+  # def summer?
+  #   @result == '夏'
+  # end
+  # def self.generate_results(count)
+  #   Array.new(count){ self.new }
+  # end
+
+  def initialize(name)
+    @name = name
   end
 
 end

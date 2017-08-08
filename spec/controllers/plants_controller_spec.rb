@@ -132,4 +132,12 @@ RSpec.describe PlantsController, type: :controller do
     end
   end
 
+  describe "Customize" do
+    let(:sequence_plant) { FG.attributes_for(:sequence_plant) }
+    it "sequences test" do
+      plant = Plant.create! sequence_plant
+      expect(plant.color).to eq 'purple'
+    end
+  end
+
 end

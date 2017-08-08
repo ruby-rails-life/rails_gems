@@ -234,34 +234,41 @@ RSpec.describe Mountain, type: :model do
   #   end
   # end
   
-  describe '#rspec_memo' do
-    it 'memo_detail' do
-      expect(1 + 2).to be >= 3
-      expect(1).to be_truthy
-      expect(nil).to be_falsey
+  # describe '#rspec_memo' do
+  #   it 'memo_detail' do
+  #     expect(1 + 2).to be >= 3
+  #     expect(1).to be_truthy
+  #     expect(nil).to be_falsey
 
-      x = [1, 2, 3]
-      expect(x.size).to eq 3
-      # x.pop
-      # expect(x.size).to eq 2
-      expect{ x.pop }.to change{ x.size }.from(3).to(2)
-      expect{ x.pop }.to change{ x.size }.by(-1)
-      expect{ x.push(10) }.to change{ x.size }.by(1)
+  #     x = [1, 2, 3]
+  #     expect(x.size).to eq 3
+  #     # x.pop
+  #     # expect(x.size).to eq 2
+  #     expect{ x.pop }.to change{ x.size }.from(3).to(2)
+  #     expect{ x.pop }.to change{ x.size }.by(-1)
+  #     expect{ x.push(10) }.to change{ x.size }.by(1)
 
-      x = [1, 2, 3]
-      expect(x).to include 1
-      expect(x).to include 1, 3
-      expect(x).to contain_exactly(2, 3, 1) 
+  #     x = [1, 2, 3]
+  #     expect(x).to include 1
+  #     expect(x).to include 1, 3
+  #     expect(x).to contain_exactly(2, 3, 1) 
 
-      expect{ 1 / 0 }.to raise_error ZeroDivisionError
+  #     expect{ 1 / 0 }.to raise_error ZeroDivisionError
+  #   end
+
+  #   it '夏が約25%になっていること' do
+  #     results = Mountain.generate_results(10000)
+  #     summer_count = results.count(&:summer?)
+  #     probability = summer_count.to_f / 10000 * 100
+  #     expect(probability).to be_within(1.0).of(25.0)
+  #   end
+  # end
+
+  describe '#factory_girl_memo' do
+    let(:new_mountain) { FG.attributes_for(:mountain) }
+    it 'factory_girl test' do
+      mountain = new_mountain
+      expect(mountain.age).to eq 16
     end
-
-    it '夏が約25%になっていること' do
-      results = Mountain.generate_results(10000)
-      summer_count = results.count(&:summer?)
-      probability = summer_count.to_f / 10000 * 100
-      expect(probability).to be_within(1.0).of(25.0)
-    end
-
-  end  
+  end
 end
