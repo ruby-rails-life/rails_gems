@@ -268,7 +268,7 @@ RSpec.describe Mountain, type: :model do
     let(:new_mountain) { FG.attributes_for(:mountain) }
     it 'factory_girl test' do
       mountain = new_mountain
-      expect(mountain.age).to eq 16
+      expect(mountain[:age]).to eq 16
     end
   end
 end

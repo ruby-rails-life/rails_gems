@@ -138,6 +138,10 @@ RSpec.describe PlantsController, type: :controller do
       plant = Plant.create! sequence_plant
       expect(plant.color).to eq 'purple'
     end
+    it "create_list test" do
+      plant_list = FG.create_list(:sequence_plant, 3)
+      expect(plant_list.length).to eq 3
+    end
   end
 
 end
