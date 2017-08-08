@@ -60,4 +60,14 @@ FactoryGirl.define do
   factory :age_plant, parent: :extend_plant do
     age 10
   end
+
+  factory :trait_plant, class: Plant do
+    name "apple"
+    color "red"
+    trait :type_young do
+      age 2
+    end
+    
+    factory :young_plant, traits: [:type_young]
+  end  
 end
