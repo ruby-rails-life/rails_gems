@@ -28,7 +28,11 @@
 
 <div class="row" style="margin-bottom: 10px">
   <div class="col-md-12">
-    <h2>Materials【has_many】(<%= @universe.materials.size %>)</h2>
+    <h2>Materials【has_many】
+    <% if @universe.materials.present? %>
+      (<%= @universe.materials.size %>)
+    <% end %>
+    </h2>
     <% if @universe.materials.present? %>
     <%= render @universe.materials %>
     <% end %>

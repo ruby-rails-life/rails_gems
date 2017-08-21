@@ -69,5 +69,18 @@ FactoryGirl.define do
     end
     
     factory :young_plant, traits: [:type_young]
-  end  
+  end
+
+  factory :faker_plant, class: Plant do
+    name { Faker::Name.name }
+    age 4
+    color { Faker::Color.color_name }
+  end
+
+  factory :g_faker_plant, class: Plant do
+    name { generate :faker_name }
+    age 10
+    color { generate :faker_color }
+  end
+
 end

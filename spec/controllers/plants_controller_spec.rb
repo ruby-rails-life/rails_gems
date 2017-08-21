@@ -156,7 +156,15 @@ RSpec.describe PlantsController, type: :controller do
       plant = FG.build(:young_plant)
       expect(plant.age).to eq 2
       expect(plant.name).to eq "apple"
-    end  
+    end
+    it "faker_plant" do
+      plant = FG.build(:faker_plant)
+      expect(plant.age).to eq 4
+    end
+    it "g_faker_plant" do
+      plant = FG.build(:g_faker_plant)
+      expect(plant.age).to eq 10
+    end
   end
 
 end
