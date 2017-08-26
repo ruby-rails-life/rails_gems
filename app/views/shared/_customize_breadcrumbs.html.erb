@@ -1,9 +1,15 @@
 <% if elements.present? %>
   <ul class="breadcrumb">
-    <% elements[0..-2].each do |element| %>
+    <% elements[0..-2].each_with_index do |element, index| %>
     <li>
     <% if element.path.present? %>
-      <a href="<%= element.path %>"><%= element.name %></a>
+      <a href="<%= element.path %>">
+        <% if index == 0 %>
+          <%= fa_icon("home 2x") %>
+          <%= fa_stacked_icon("home", base: "square-o") %>
+        <% end %>
+        <%= element.name %>
+      </a>
     <% else %>
       <%= element.name %>
     <% end %>

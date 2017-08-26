@@ -18,11 +18,8 @@ gem 'mysql2'
 
 gem 'rails-i18n'
 gem 'ransack'
-
 gem 'baby_squeel'
-
 gem 'config'
-
 gem 'active_decorator'
 gem 'active_hash'
 gem 'active_type'
@@ -41,6 +38,7 @@ gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 gem 'seed_dump'
 gem 'simple_form'
 gem 'activerecord-import'
+gem 'font-awesome-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

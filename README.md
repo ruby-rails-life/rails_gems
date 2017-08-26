@@ -191,3 +191,8 @@
 
 * config/locales/devise.views.ja.yml
 * [reference](https://dev.9bar.tokyo/rails/devise-i18n-views)
+
+## font-awesome-rails
+
+* lib/custom_breadcrumbs_builder.rb
+* [reference](https://www.sglabs.jp/font-awesome-rails/)
