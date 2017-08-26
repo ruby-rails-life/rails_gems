@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :prefecture_name, '都道府県' %>
+    <%= f.collection_select :prefecture_name, JpPrefecture::Prefecture.all, :name, :name, include_blank: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :user_id %>
     <%= f.select :user_id, User.all.map { |u| [u.name, u.id] } %>
   </div>

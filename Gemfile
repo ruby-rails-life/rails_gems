@@ -40,6 +40,7 @@ gem 'simple_form'
 gem 'activerecord-import'
 gem 'font-awesome-rails'
 gem 'data-confirm-modal'
+gem 'jp_prefecture'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

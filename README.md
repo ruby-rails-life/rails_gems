@@ -201,3 +201,8 @@
 
 * views/universes/index.html.erb
 * [reference](http://qiita.com/ihatov08/items/a0b3b043ba809fdc2cd6)
+
+## jp_prefecture
+
+* views/topics/_form.html.erb
+* [reference](http://qiita.com/soyanchu/items/9661698648ba489df0c7)
