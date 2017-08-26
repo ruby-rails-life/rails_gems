@@ -186,3 +186,8 @@
 ## devise-bootstrap-views
 
 * [reference](http://qiita.com/guri3/items/8c414558085620999786)
+
+## devise-i18n-views
+
+* config/locales/devise.views.ja.yml
+* [reference](https://dev.9bar.tokyo/rails/devise-i18n-views)
