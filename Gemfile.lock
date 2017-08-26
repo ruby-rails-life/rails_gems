@@ -110,6 +110,8 @@ GEM
     config (1.4.0)
       activesupport (>= 3.0)
       deep_merge (~> 1.1.1)
+    data-confirm-modal (1.3.0)
+      railties (>= 3.0)
     debug_inspector (0.0.3)
     deep_merge (1.1.1)
     devise (4.3.0)
@@ -507,6 +509,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   config
+  data-confirm-modal
   devise
   devise-bootstrap-views
   devise-i18n

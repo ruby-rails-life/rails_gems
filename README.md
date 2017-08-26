@@ -196,3 +196,8 @@
 
 * lib/custom_breadcrumbs_builder.rb
 * [reference](https://www.sglabs.jp/font-awesome-rails/)
+
+## data-confirm-modal
+
+* views/universes/index.html.erb
+* [reference](http://qiita.com/ihatov08/items/a0b3b043ba809fdc2cd6)

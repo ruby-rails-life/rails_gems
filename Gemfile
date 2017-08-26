@@ -39,6 +39,7 @@ gem 'seed_dump'
 gem 'simple_form'
 gem 'activerecord-import'
 gem 'font-awesome-rails'
+gem 'data-confirm-modal'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
