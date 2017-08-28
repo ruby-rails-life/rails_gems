@@ -7,7 +7,8 @@
 
 【controller】topics#index
 
-* [reference](http://qiita.com/LuckOfWise/items/e020e896e71d47d0c6a4)  
+* [reference_1](http://qiita.com/LuckOfWise/items/e020e896e71d47d0c6a4)
+* [reference_2](https://github.com/activerecord-hackery/ransack)
 
 ## nokogiri
 

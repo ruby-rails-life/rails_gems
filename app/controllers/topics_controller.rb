@@ -4,8 +4,8 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @search = Topic.search(params[:q])
-    @topics = @search.result
+    @q = Topic.ransack(params[:q])
+    @topics = @q.result
 
     respond_to do |format|
       format.html # index.html.erb
