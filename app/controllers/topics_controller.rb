@@ -14,6 +14,11 @@ class TopicsController < ApplicationController
     add_breadcrumb 'Topics', topics_path
   end
 
+  def search
+    index
+    render :index
+  end
+
   # GET /topics/1
   # GET /topics/1.json
   def show; end

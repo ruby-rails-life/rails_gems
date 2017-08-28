@@ -122,7 +122,12 @@ Rails.application.routes.draw do
   get 'holidays/edit'
   put 'holidays', to: 'holidays#update'
 
-  resources :topics
+  #resources :topics
+  resources :topics do
+    collection do
+      match 'search' => 'topics#search', via: [:get, :post], as: :search
+    end
+  end
   resources :users
   resources :articles do
     resources :comments

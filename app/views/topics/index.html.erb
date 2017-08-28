@@ -2,9 +2,13 @@
 
 <h1>Topics</h1>
 
-<%= search_form_for @q do |f| %>
+<%= search_form_for @q, url: search_topics_path,
+                        html: { method: :post } do |f| %>
   <%= f.label :title_cont, 'タイトル' %>
   <%= f.text_field :title_cont %>
+  <br />
+  <%= f.label :prefecture_code_eq, '都道府県' %>
+  <%= f.collection_select :prefecture_code_eq, JpPrefecture::Prefecture.all, :code, :name, include_blank: true %>
   <br />
   <%= f.label :created_at, '作成日' %>
   <%= f.date_select :created_at_gteq, include_blank: true %>〜
