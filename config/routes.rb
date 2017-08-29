@@ -88,7 +88,7 @@
 Rails.application.routes.draw do
   resources :plants
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
   
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
