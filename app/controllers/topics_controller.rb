@@ -4,8 +4,10 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @q = Topic.ransack(params[:q])
-    @topics = @q.result
+    #@q = Topic.ransack(params[:q])
+    @q = Topic.ransack(params[:q].try(:merge, m: 'or'))
+    #@topics = @q.result
+    @topics = @q.result(distinct: true).to_a.uniq
 
     respond_to do |format|
       format.html # index.html.erb
